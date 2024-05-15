@@ -1,0 +1,83 @@
+//<BUTTONS (a.btn+tab)>
+// Снипет (HTML): btn
+
+.btn {
+	font-family: $fontFamily;
+	font-size: vwm(37);
+	font-weight: 600;
+	padding: vwm(5) vwm(38);
+	color: var(--light-color-text);
+	
+	border: 2px solid var(--accent-color);
+	background: rgba(217, 217, 217, 0.08);
+	color: var(--light-text-color);
+	box-shadow: 0 vwm(4) vwm(4) 0 rgba(0, 0, 0, 0.25);
+
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	transition: all 0.3s ease 0s;
+
+
+	//ios
+	border-radius: vwm(50);
+	-webkit-appearance: none;
+  -webkit-border-radius: vwm(50);
+	outline: 0;
+
+	@media (min-width:$tablet){
+		font-size: vwpc(37);
+		padding: vwpc(5) vwpc(38);
+		box-shadow: 0 vwpc(4) vwpc(4) 0 rgba(0, 0, 0, 0.25);
+		
+		@media (hover: hover) {
+			&:hover {
+				background: var(--accent-color);
+				color: var(--light-color-text);
+			}
+		}
+	}
+
+
+	// &_br {
+	// 	background: transparent;
+	// 	color: var(--main-text-color);
+	// 	// box-shadow: 0 vwpc(4) vwpc(4) 0 rgba(0, 0, 0, 0.25);
+	// 	box-shadow: unset; 
+
+	// 	@media (min-width:$tablet){
+	// 		box-shadow: unset; 
+	// 	}
+	// }
+
+	// @media (any-hover: hover) {
+	// 	&:hover {
+	// 		border: 2px solid #050b25;
+	// 		box-shadow: 0 2px 12px 0 #0d5dd6, 0 2px 8px 0 #0d5dd6;
+	// 		background: var(--light-color);
+	// 		color: #050b25;
+	// 	}
+	// }
+
+	// &:focus {
+	// 	border: 2px solid #050b25;
+	// 	outline: 1px solid #050b25;
+	// 	box-shadow: 0 0 0 0;
+	// 	background: var(--accent-color);
+	// 	color: var(--light-color);
+	// }
+	
+	// &:active {
+	// 	border: 2px solid #050b25;
+	// 	box-shadow: 0 0 0 0;
+	// 	background: #fefffd;
+	// 	color: #050b25;
+	// }
+
+	// &:disabled {
+	// 	opacity: 0.6;
+	// }
+
+
+
+}

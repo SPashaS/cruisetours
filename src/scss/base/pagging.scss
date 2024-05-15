@@ -1,0 +1,66 @@
+.pagging {
+	padding-top: 20px;
+	padding-bottom: 20px;
+
+	display: grid;
+	justify-items: end;
+	gap: 20px;
+	// .pagging__arrow
+	&__arrow {
+	}
+	// .pagging__list
+	&__list {
+		display: flex;
+		li {
+		}
+	}
+	// .pagging__item
+	&__item {
+		&._active {
+		}
+	}
+}
+
+
+.pagging {
+
+	// .pagging__list
+
+	&__list {
+		display: flex;
+		justify-content: flex-end;
+		gap: 12px;
+	}
+
+	// .pagging__item
+	&__item {
+		display: inline-flex;
+		justify-content: center;
+		align-items: center;
+		width: 32px;
+		height: 32px;
+		border-radius: 50%;
+		background: var(--light-color);
+		color: #171717;
+		font-size: 2rem;
+		font-weight: 700;
+
+		&._active {
+			color: var(--light-text-color);
+			background: var(--accent-color);
+			box-shadow: 0 0 6px 0 #006ac2, 0 0 10px 0 #006ac2;
+		}
+		
+		&::before {
+			font-size: 16px;
+		}
+	}
+
+	&__btns {
+		.pagging__item {
+			box-shadow: 0 0 6px 0 #006ac2, 0 0 10px 0 #006ac2;
+		}
+	}
+
+}
+

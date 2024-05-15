@@ -1,0 +1,158 @@
+// Заголовки, общие БЄМ блоки и проче...
+
+h2 {
+  font-weight: 600;
+  font-size: vwm(30);
+
+  @media (min-width:$tablet){
+      font-size: vwpc(60);
+  }
+}
+
+.socials {
+  display: flex;
+  gap: vwm(6);
+
+
+  // .socials__item
+  &__item {}
+
+}
+
+.shedule {
+
+  // .shedule__row
+  &__row {
+    display: flex;
+    justify-content: space-between;
+
+    span {
+      font-size: vwm(12);
+
+      @media (min-width:$tablet){
+        font-size: vwpc(12);
+      }
+    }
+  }
+}
+
+.icon {
+  display: inline-block;
+  background-size: cover;
+  width: vwm(22);
+  height: vwm(22);
+
+  @media (min-width:$tablet){
+    width: vwpc(40);
+    height: vwpc(40);
+  }
+
+
+  &_fly {
+    background-image: url("@img/icons-c/fly.png");
+
+    width: vwm(25);
+    height: vwm(25);
+
+    @media (min-width:$tablet){
+      width: vwpc(42);
+      height: vwpc(42);
+    }
+  }
+
+  &_msc {
+    background-image: url("@img/icons-c/msc.png");
+    width: vwm(31);
+    height: vwm(27);
+
+
+    @media (min-width:$tablet){
+      width: vwpc(58);
+      height: vwpc(56);
+    }
+  }
+
+  &_ok {
+    background-image: url("@img/icons-c/ok.png");
+  }
+  &_play {
+    background-image: url("@img/icons-c/play.png");
+
+  }
+}
+
+
+
+
+.slider-nav {
+
+  // .slider-nav__btn
+
+  &__btn {
+
+    // .slider-nav__btn_prev
+    &_prev {}
+
+    // .slider-nav__btn_next
+    &_next {}
+    
+  }
+}
+//====================================================================================================
+.button {
+	span:nth-child(1) {
+		display: block;
+	}
+	span:nth-child(2) {
+		display: none;
+	}
+
+	._show & {
+		span:nth-child(1) {
+			display: none;
+		}
+		span:nth-child(2) {
+			display: block;
+		}
+	}
+}
+
+.btn-more {
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+  gap: vwm(4);
+
+  span:nth-child(2) {
+    display: none;
+  }
+
+  &::before {
+    font-size: vwm(10);
+    transform: rotate(180deg);
+    @media (min-width:$tablet){
+      font-size: vwpc(13);
+  
+    }
+  }
+
+  ._showmore-active & {
+    span:nth-child(2) {
+      display: block;
+    }
+    span:nth-child(1) {
+      display: none;
+    }
+
+    &::before {
+      transform: rotate(0);
+    }
+  }
+}
+
+
+.phone-number:link {
+  text-decoration: underline;
+}
+
+//====================================================================================================

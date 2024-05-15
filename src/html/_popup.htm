@@ -1,0 +1,61 @@
+<div id="application" aria-hidden="true" class="popup">
+  <div class="popup__wrapper">
+    <div class="popup__content">
+      <button data-close type="button" class="popup__close _icon-close"></button>
+      <div class="popup__text">
+        <div class="application">
+          <div class="application__header">
+            <div class="application__title">ОСТАВИТЬ ЗАЯВКУ</div>
+            <p class="application__text">
+              Оставьте свои данные, мы свяжемся с вами и предложим лучший вариант
+            </p>
+          </div>
+          <div class="application__body">
+            <div class="application__form form">
+              <form class="form" action="#">
+                <div class="form__row">
+                  <div class="form__input">
+                    <input type="text" data-error="Ошибка" placeholder="Ваше имя">
+                  </div>
+                </div>
+                <div class="form__row">
+                  <div class="form__input">
+                    <input type="text" data-error="Ошибка" placeholder="Телефон">
+                  </div>
+                </div>
+                <div class="form__row">
+                  <div class="form__textarea">
+                    <textarea type="text" placeholder="Пожелания по туру"></textarea>
+                  </div>
+                </div>
+                <div class="form__row">
+                  <div class="form__select">
+
+                    <div class="form__select-item">
+                      <input id="type-contacts-call-me" type="radio" name="type-contacts" value="CallMe" checked>
+                      <label for="type-contacts-call-me">Позвонить мне</label>
+                    </div>
+
+                    <div class="form__select-item">
+                      <input id="type-contacts-whatsapp" type="radio" name="type-contacts" value="WhatsApp">
+                      <label for="type-contacts-whatsapp">Написать мне в WhatsApp</label>
+                    </div>
+
+                    <div class="form__select-item">
+                      <input id="type-contacts-telegram" type="radio" name="type-contacts" value="Telegram">
+                      <label for="type-contacts-telegram">Написать мне в Telegram</label>
+                    </div>
+
+                  </div>
+                </div>
+                <div class="form__submit">
+                  <button class="btn" type="submit">Отправить</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
