@@ -7,8 +7,14 @@
 
 //////////////////
 .swiper {
+	position: relative;
 	overflow: hidden;
+
+	@media (min-width:$tablet){
+		border-radius: vwpc(35);
+	}
 }
+
 .swiper-wrapper {
 	width: 100%;
 	height: 100%;

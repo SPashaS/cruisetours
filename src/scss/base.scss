@@ -31,6 +31,10 @@
 // Сниппет (HTML): ibga (a c картинкой и классами)
 [class*="-ibg"] {
 	position: relative;
+
+	picture,
+	iframe,
+	svg,
 	img {
 		position: absolute;
 		width: 100%;
@@ -38,6 +42,10 @@
 		top: 0;
 		left: 0;
 		object-fit: cover;
+
+		// @media (min-width:$tablet){
+		// 	border-radius: vwpc(35) 
+		// }
 	}
 }
 [class*="-ibg_contain"] {

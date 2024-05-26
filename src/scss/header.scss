@@ -92,14 +92,15 @@
 }
 
 .logo {
-  img {
-    width: vwm(42);
-    aspect-ratio: 42/48;
+  background-image: url("@img/logo.png");
+  background-size: cover;
+  width: vwm(42);
+  aspect-ratio: 421/482;
 
-    @media (min-width:$tablet) {
-      width: vwpc(61);
-    }
+  @media (min-width:$tablet) {
+    width: vwpc(61);
   }
+
 }
 
 .menu {
@@ -456,15 +457,15 @@
 }
 
 .menu-item_h {
+  &:not(:last-child) {
+    margin-bottom: vwm(12);
+  }
 
+  @media (min-width:$tablet){
+    white-space: nowrap;
 
-  @media (max-width:$tablet) {
     &:not(:last-child) {
-      margin-bottom: vwm(12);
-    }
-
-    @media (min-width:$tablet){
-      white-space: nowrap;
+      margin-bottom: 0;
     }
   }
 }

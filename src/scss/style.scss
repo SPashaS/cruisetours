@@ -121,7 +121,7 @@ body {
 	[class*="__container"] {
 		@if ($maxWidthContainer>0) {
 			// max-width: $maxWidthContainer+px;
-			max-width: vwm(445);
+			max-width: vwm(450);
 			box-sizing: content-box;
 			margin: 0 auto;
 			// position: relative;
@@ -193,3 +193,9 @@ body {
 // Подключение стилей отдельных страниц
 @import "home";
 @import "cruises";
+@import "fleet";
+@import "liner";
+@import "cabin";
+@import "port";
+@import "news";
+@import "premium";

@@ -79,6 +79,7 @@
   // .footer__btn
   &__btn {
     position: absolute;
+    background: transparent;
     @media (max-width:$tablet){
       top: 50%;
       left: 50%;

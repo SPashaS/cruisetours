@@ -6,7 +6,7 @@
 
 
 <body>
-	<div class="wrapper wrapper_header">
+	<div class="wrapper">
 		@@include('html/_header.htm',{})
 		<main class="page page_home">
 			<section class="page__promo promo">
@@ -26,7 +26,7 @@
 					<picture>
 						<source media="(max-width: 992px)" srcset="@img/promo/home.jpg">
 						<source media="(min-width: 992px)" srcset="@img/promo/home-pc.jpg">
-						<img src="@img/1x1.png" alt="Chris standing up holding his daughter Elva">
+						<img src="@img/1x1.png" alt="1">
 					</picture>
 				</div>
 
@@ -38,6 +38,8 @@
 					</p>
 				</div>
 			</section>
+
+
 
 			<section class="page__promotion promotion">
 				<div class="promotion__container">
@@ -217,7 +219,7 @@
 								<div class="slider-nav__btn_next"></div>
 							</div> -->
 
-							<button data-show-more-btn type="button" class="promotion__btn-more btn-more _icon-arrow">
+							<button hidden  data-show-more-btn type="button" class="promotion__btn-more btn-more _icon-arrow">
 								<span>Показать еще</span><span>Скрыть</span>
 							</button>
 

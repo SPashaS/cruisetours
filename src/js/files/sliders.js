@@ -154,137 +154,340 @@ function initSliders() {
 		)
 	}
 	
-	// if (document.querySelector('.promotion__swiper')) {
-	// 	new Swiper('.promotion__slider', {
-	// 		// Подключаем модули слайдера
-	// 		// для конкретного случая
-	// 		//modules: [Navigation, Pagination],
-	// 		modules: [Navigation],
+	if (document.querySelector('.liner__swiper')) {
+		new Swiper('.liner__slider', {
+			// Подключаем модули слайдера
+			// для конкретного случая
+			//modules: [Navigation, Pagination],
+			modules: [Navigation],
 	
-	// 		// effect: 'fade',
-	// 		// autoplay: {
-  //     //   delay: 2500,
-  //     //   disableOnInteraction: false,
-  //     // },
+			// effect: 'fade',
+			// autoplay: {
+      //   delay: 2500,
+      //   disableOnInteraction: false,
+      // },
 	
-	// 		// observer: true,
-	// 		// observeParents: true,
-	// 		slidesPerView: 1,
-	// 		spaceBetween: 0,
-	// 		// autoHeight: true,
-	// 		speed: 800,
-	// 		// touchRatio: 0,
-	// 		//simulateTouch: false,
-	// 		loop: true,
-	// 		//preloadImages: false,
-	// 		//lazy: true,
-	// 		// Dotts
-	// 		// pagination: {
-	// 		// 	el: '.desc__slider-pagination',
-	// 		// 	clickable: true,
-	// 		// },
-	// 		// Arrows
-	// 		navigation: {
-	// 			nextEl: '.promo__slider-nav .slider-nav__btn_next',
-	// 			prevEl: '.promo__slider-nav .slider-nav__btn_prev',
-	// 		},
-	// 		// breakpoints: {
-	// 		// 	0: {
-	// 		// 		slidesPerView: 1,
-	// 		// 		spaceBetween: 20,
-	// 		// 	},
-	// 		// 	320: {
-	// 		// 		slidesPerView: "auto",
-	// 		// 		spaceBetween: 28,
-	// 		// 	},
-	// 		// 	768: {
-	// 		// 		slidesPerView: 2,
-	// 		// 		spaceBetween: 20,
-	// 		// 	},
-	// 		// 	992: {
-	// 		// 		slidesPerView: "auto",
-	// 		// 		spaceBetween: 20,
-	// 		// 	},
-	// 		// 	1268: {
-	// 		// 		slidesPerView: "auto",
-	// 		// 		spaceBetween: 44,
-	// 		// 	},
-	// 		// },
+			// observer: true,
+			// observeParents: true,
+			slidesPerView: 1,
+			spaceBetween: 0,
+			// autoHeight: true,
+			speed: 800,
+			// touchRatio: 0,
+			//simulateTouch: false,
+			loop: true,
+			//preloadImages: false,
+			//lazy: true,
+			// Dotts
+			// pagination: {
+			// 	el: '.desc__slider-pagination',
+			// 	clickable: true,
+			// },
+			// Arrows liner__slider-nav
+			navigation: {
+				nextEl: '.slider-nav .slider-nav__btn_next',
+				prevEl: '.slider-nav .slider-nav__btn_prev',
+			},
+			// breakpoints: {
+			// 	0: {
+			// 		slidesPerView: 1,
+			// 		spaceBetween: 20,
+			// 	},
+			// 	320: {
+			// 		slidesPerView: "auto",
+			// 		spaceBetween: 28,
+			// 	},
+			// 	768: {
+			// 		slidesPerView: 2,
+			// 		spaceBetween: 20,
+			// 	},
+			// 	992: {
+			// 		slidesPerView: "auto",
+			// 		spaceBetween: 20,
+			// 	},
+			// 	1268: {
+			// 		slidesPerView: "auto",
+			// 		spaceBetween: 44,
+			// 	},
+			// },
 
-	// 		on: {
+			on: {
 
-	// 		}
-	// 	});
-
-
-	// }
+			}
+		});
 
 
-
-	// if (document.querySelector('.ps__swiper')) {
-	// 	new Swiper('.ps__slider', {
-	// 		// Подключаем модули слайдера
-	// 		// для конкретного случая
-	// 		//modules: [Navigation, Pagination],
-	// 		modules: [Autoplay],
+	}
 	
-	// 		// effect: 'fade',
-	// 		autoplay: {
-  //       delay: 6000,
-  //       disableOnInteraction: false,
-  //     },
+	if (document.querySelector('.creation-liner__slider_1')) {
+		new Swiper('.creation-liner__slider_1', {
+			// Подключаем модули слайдера
+			// для конкретного случая
+			//modules: [Navigation, Pagination],
+			modules: [Navigation],
 	
-	// 		// observer: true,
-	// 		// observeParents: true,
-	// 		slidesPerView: 1,
-	// 		spaceBetween: 0,
-	// 		// autoHeight: true,
-	// 		speed: 800,
-	// 		// touchRatio: 0,
-	// 		//simulateTouch: false,
-	// 		loop: true,
-	// 		//preloadImages: false,
-	// 		//lazy: true,
-	// 		// Dotts
-	// 		// pagination: {
-	// 		// 	el: '.desc__slider-pagination',
-	// 		// 	clickable: true,
-	// 		// },
-	// 		// Arrows
-	// 		// navigation: {
-	// 		// 	nextEl: '.promo__slider-nav .slider-nav__btn_next',
-	// 		// 	prevEl: '.promo__slider-nav .slider-nav__btn_prev',
-	// 		// },
-	// 		// breakpoints: {
-	// 		// 	0: {
-	// 		// 		slidesPerView: 1,
-	// 		// 		spaceBetween: 20,
-	// 		// 	},
-	// 		// 	320: {
-	// 		// 		slidesPerView: "auto",
-	// 		// 		spaceBetween: 28,
-	// 		// 	},
-	// 		// 	768: {
-	// 		// 		slidesPerView: 2,
-	// 		// 		spaceBetween: 20,
-	// 		// 	},
-	// 		// 	992: {
-	// 		// 		slidesPerView: "auto",
-	// 		// 		spaceBetween: 20,
-	// 		// 	},
-	// 		// 	1268: {
-	// 		// 		slidesPerView: "auto",
-	// 		// 		spaceBetween: 44,
-	// 		// 	},
-	// 		// },
+			// effect: 'fade',
+			// autoplay: {
+      //   delay: 2500,
+      //   disableOnInteraction: false,
+      // },
+	
+			// observer: true,
+			// observeParents: true,
+			slidesPerView: 1,
+			spaceBetween: 0,
+			// autoHeight: true,
+			speed: 800,
+			// touchRatio: 0,
+			//simulateTouch: false,
+			loop: true,
+			//preloadImages: false,
+			//lazy: true,
+			// Dotts
+			// pagination: {
+			// 	el: '.desc__slider-pagination',
+			// 	clickable: true,
+			// },
+			// Arrows
+			navigation: {
+				nextEl: '.creation-liner__slider_1 ~ .slider-nav .slider-nav__btn_next',
+				prevEl: '.creation-liner__slider_1 ~ .slider-nav .slider-nav__btn_prev',
+			},
+			// breakpoints: {
+			// 	0: {
+			// 		slidesPerView: 1,
+			// 		spaceBetween: 20,
+			// 	},
+			// 	320: {
+			// 		slidesPerView: "auto",
+			// 		spaceBetween: 28,
+			// 	},
+			// 	768: {
+			// 		slidesPerView: 2,
+			// 		spaceBetween: 20,
+			// 	},
+			// 	992: {
+			// 		slidesPerView: "auto",
+			// 		spaceBetween: 20,
+			// 	},
+			// 	1268: {
+			// 		slidesPerView: "auto",
+			// 		spaceBetween: 44,
+			// 	},
+			// },
 
-	// 		on: {
+			on: {
 
-	// 		}
-	// 	});
+			}
+		});
 
 
-	// }
+	}
+	
+	if (document.querySelector('.creation-liner__slider_2')) {
+		new Swiper('.creation-liner__slider_2', {
+			// Подключаем модули слайдера
+			// для конкретного случая
+			//modules: [Navigation, Pagination],
+			modules: [Navigation],
+	
+			// effect: 'fade',
+			// autoplay: {
+      //   delay: 2500,
+      //   disableOnInteraction: false,
+      // },
+	
+			// observer: true,
+			// observeParents: true,
+			slidesPerView: 1,
+			spaceBetween: 0,
+			// autoHeight: true,
+			speed: 800,
+			// touchRatio: 0,
+			//simulateTouch: false,
+			loop: true,
+			//preloadImages: false,
+			//lazy: true,
+			// Dotts
+			// pagination: {
+			// 	el: '.desc__slider-pagination',
+			// 	clickable: true,
+			// },
+			// Arrows
+			navigation: {
+				nextEl: '.creation-liner__slider_2 ~ .slider-nav .slider-nav__btn_next',
+				prevEl: '.creation-liner__slider_2 ~ .slider-nav .slider-nav__btn_prev',
+			},
+			// breakpoints: {
+			// 	0: {
+			// 		slidesPerView: 1,
+			// 		spaceBetween: 20,
+			// 	},
+			// 	320: {
+			// 		slidesPerView: "auto",
+			// 		spaceBetween: 28,
+			// 	},
+			// 	768: {
+			// 		slidesPerView: 2,
+			// 		spaceBetween: 20,
+			// 	},
+			// 	992: {
+			// 		slidesPerView: "auto",
+			// 		spaceBetween: 20,
+			// 	},
+			// 	1268: {
+			// 		slidesPerView: "auto",
+			// 		spaceBetween: 44,
+			// 	},
+			// },
+
+			on: {
+
+			}
+		});
+
+
+	}
+
+	if (document.querySelector('.interior-cabin__swiper')) {
+		new Swiper('.interior-cabin__slider', {
+			// Подключаем модули слайдера
+			// для конкретного случая
+			//modules: [Navigation, Pagination],
+			modules: [Navigation],
+	
+			// effect: 'fade',
+			// autoplay: {
+      //   delay: 2500,
+      //   disableOnInteraction: false,
+      // },
+	
+			// observer: true,
+			// observeParents: true,
+			slidesPerView: 1,
+			spaceBetween: 0,
+			// autoHeight: true,
+			speed: 800,
+			// touchRatio: 0,
+			//simulateTouch: false,
+			loop: true,
+			//preloadImages: false,
+			//lazy: true,
+			// Dotts
+			// pagination: {
+			// 	el: '.desc__slider-pagination',
+			// 	clickable: true,
+			// },
+			// Arrows
+			navigation: {
+				nextEl: '.slider-nav .slider-nav__btn_next',
+				prevEl: '.slider-nav .slider-nav__btn_prev',
+			},
+			// breakpoints: {
+			// 	0: {
+			// 		slidesPerView: 1,
+			// 		spaceBetween: 20,
+			// 	},
+			// 	320: {
+			// 		slidesPerView: "auto",
+			// 		spaceBetween: 28,
+			// 	},
+			// 	768: {
+			// 		slidesPerView: 2,
+			// 		spaceBetween: 20,
+			// 	},
+			// 	992: {
+			// 		slidesPerView: "auto",
+			// 		spaceBetween: 20,
+			// 	},
+			// 	1268: {
+			// 		slidesPerView: "auto",
+			// 		spaceBetween: 44,
+			// 	},
+			// },
+
+			on: {
+
+			}
+		});
+
+
+	}
+
+	if (document.querySelector('.suite')) {
+		const sliders = document.querySelectorAll('.item-suite__slider');
+		console.log(sliders);
+		for (let i = 0; i < sliders.length; i++) {
+			const slider =  sliders[i];
+			let classSlider = `item-suite__slider_${i}`;
+			slider.classList.add(classSlider);
+
+			
+			new Swiper(`.${classSlider}`, {
+				// Подключаем модули слайдера
+				// для конкретного случая
+				//modules: [Navigation, Pagination],
+				modules: [Navigation],
+		
+				// effect: 'fade',
+				// autoplay: {
+				//   delay: 2500,
+				//   disableOnInteraction: false,
+				// },
+		
+				// observer: true,
+				// observeParents: true,
+				slidesPerView: 1,
+				spaceBetween: 0,
+				// autoHeight: true,
+				speed: 800,
+				// touchRatio: 0,
+				//simulateTouch: false,
+				loop: true,
+				//preloadImages: false,
+				//lazy: true,
+				// Dotts
+				// pagination: {
+				// 	el: '.desc__slider-pagination',
+				// 	clickable: true,
+				// },
+				// Arrows
+				navigation: {
+					nextEl: `.${classSlider} ~ .slider-nav .slider-nav__btn_next`,
+					prevEl: `.${classSlider} ~ .slider-nav .slider-nav__btn_prev`,
+				},
+				// breakpoints: {
+				// 	0: {
+				// 		slidesPerView: 1,
+				// 		spaceBetween: 20,
+				// 	},
+				// 	320: {
+				// 		slidesPerView: "auto",
+				// 		spaceBetween: 28,
+				// 	},
+				// 	768: {
+				// 		slidesPerView: 2,
+				// 		spaceBetween: 20,
+				// 	},
+				// 	992: {
+				// 		slidesPerView: "auto",
+				// 		spaceBetween: 20,
+				// 	},
+				// 	1268: {
+				// 		slidesPerView: "auto",
+				// 		spaceBetween: 44,
+				// 	},
+				// },
+	
+				on: {
+	
+				}
+			});
+		}
+
+
+	}
+
 
 }
 // Скролл на базе слайдера (по классу swiper_scroll для оболочки слайдера)
@@ -326,14 +529,3 @@ window.addEventListener("load", function (e) {
 	// Запуск инициализации скролла на базе слайдера (по классу swiper_scroll)
 	//initSlidersScroll();
 });
-
-
-// window.addEventListener("resize", function (e) {
-// 	// Запуск инициализации слайдеров
-// 	if (document.documentElement.clientWidth < 1280 || document.documentElement.clientWidth > 768) {
-// 		initSliders();
-// 	}
-
-// 	// Запуск инициализации скролла на базе слайдера (по классу swiper_scroll)
-// 	//initSlidersScroll();
-// });
