@@ -10,7 +10,7 @@
 			opacity: 0;
 		}
 	</style>
-	<link rel="stylesheet" href="css/style.css?_v=20240515183628">
+	<link rel="stylesheet" href="css/style.css">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,10 +18,18 @@
 
 
 <body>
-	<div class="wrapper wrapper_header">
+	<div class="wrapper">
 		<header class="header">
 			<div class="header__container">
 				<div class="header__main">
+
+					<div class="header__breadcrumbs breadcrumbs">
+						<div class="kama_breadcrumbs">
+							<span><a href="#"><span>Главная</span></a></span>
+							<span class="kb_sep"> / </span>
+							<span class="kb_title">Круизы</span>
+						</div>
+					</div>
 
 				</div>
 
@@ -32,9 +40,7 @@
 						<li><a href="#" class="socials__item _icon-youtube" aria-label="youtube"></a></li>
 					</ul>
 				</div>
-				<div class="header__logo logo">
-					<img src="img/1x1.png" data-src="img/logo.png" alt="CRUISETOURS.BY">
-				</div>
+				<div class="header__logo logo"></div>
 				<div class="header__right-block">
 					<div class="header__info">
 						<a href="tel:+375295845675" class="header__phone">+375295845675</a>
@@ -369,7 +375,7 @@
 					<picture>
 						<source media="(max-width: 992px)" srcset="img/promo/home.jpg">
 						<source media="(min-width: 992px)" srcset="img/promo/home-pc.jpg">
-						<img src="img/1x1.png" alt="Chris standing up holding his daughter Elva">
+						<img src="img/1x1.png" alt="1">
 					</picture>
 				</div>
 
@@ -381,6 +387,8 @@
 					</p>
 				</div>
 			</section>
+
+
 
 			<section class="page__promotion promotion">
 				<div class="promotion__container">
@@ -565,7 +573,7 @@
 								<div class="slider-nav__btn_next"></div>
 							</div> -->
 
-							<button data-show-more-btn type="button" class="promotion__btn-more btn-more _icon-arrow">
+							<button hidden data-show-more-btn type="button" class="promotion__btn-more btn-more _icon-arrow">
 								<span>Показать еще</span><span>Скрыть</span>
 							</button>
 
@@ -1382,7 +1390,7 @@
 			</div>
 		</div>
 	</div>
-	<script src="js/app.min.js?_v=20240515183628"></script>
+	<script src="js/app.min.js?_v=20240526234314"></script>
 </body>
 
 </html>
