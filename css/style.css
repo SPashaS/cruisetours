@@ -570,6 +570,7 @@ body.popup-show::after {
   position: relative;
 }
 [class*=-ibg] picture,
+[class*=-ibg] picture шьп,
 [class*=-ibg] iframe,
 [class*=-ibg] svg,
 [class*=-ibg] img {
@@ -641,13 +642,24 @@ body.popup-show::after {
   display: none !important;
 }
 
+h1 {
+  margin-bottom: 2.0833333333vw;
+}
+@media (min-width: 991.98px) {
+  h1 {
+    margin-bottom: 1.0980966325vw;
+  }
+}
+
 h2 {
   font-weight: 600;
   font-size: 6.25vw;
+  margin-bottom: 3.125vw;
 }
 @media (min-width: 991.98px) {
   h2 {
     font-size: 4.39238653vw;
+    margin-bottom: 3.6603221083vw;
   }
 }
 
@@ -932,6 +944,16 @@ h2 {
   }
 }
 
+.text {
+  padding-top: 5.2083333333vw;
+  padding-bottom: 5.2083333333vw;
+}
+@media (min-width: 991.98px) {
+  .text {
+    padding-top: 1.8301610542vw;
+    padding-bottom: 1.8301610542vw;
+  }
+}
 .text a {
   position: relative;
 }
@@ -992,6 +1014,10 @@ h2 {
   .text ul li:not(:last-child) {
     margin-bottom: 0.7320644217vw;
   }
+}
+
+.clip-path {
+  clip-path: path("M570.637 326.893C574.311 498.062 391.804 662.808 58.3099 689.97C-136.471 705.835 -100.455 508.427 -104.129 337.258C-107.802 166.089 -338.754 -9.89754 -25.7995 0.811298C145.369 -2.86253 566.963 155.724 570.637 326.893Z");
 }
 
 .header {
@@ -2295,7 +2321,7 @@ h2 {
 }
 @media (min-width: 991.98px) {
   .form__input input, .form__textarea textarea {
-    color: #797979;
+    color: #000000;
     border-radius: 0.7320644217vw;
   }
 }
@@ -2642,11 +2668,11 @@ h2 {
     align-items: center;
   }
 }
-.recomendation-block__body > *:nth-child(2) {
+.recomendation-block__body > *:not(:first-child) {
   margin-top: -3.125vw;
 }
 @media (min-width: 991.98px) {
-  .recomendation-block__body > *:nth-child(2) {
+  .recomendation-block__body > *:not(:first-child) {
     margin-top: -1.8301610542vw;
   }
 }
@@ -3157,6 +3183,7 @@ h2 {
 }
 .cruise-route__days-row {
   display: grid;
+  align-items: center;
   justify-items: center;
   grid-template-columns: repeat(10, 1fr);
   padding: 0 1.0416666667vw;
@@ -3175,87 +3202,87 @@ h2 {
 @media (min-width: 991.98px) {
   .cruise-route__days-row_1, .cruise-route__days-row_3 {
     background-image: url("../img/cruise/line-1-pc.svg");
-    aspect-ratio: 1366/324;
+    aspect-ratio: 1366/200;
   }
 }
 .cruise-route__days-row_1 > span:nth-child(1), .cruise-route__days-row_3 > span:nth-child(1) {
-  top: 7%;
+  top: -30%;
 }
 @media (min-width: 991.98px) {
   .cruise-route__days-row_1 > span:nth-child(1), .cruise-route__days-row_3 > span:nth-child(1) {
-    top: 25%;
+    top: -29%;
   }
 }
 .cruise-route__days-row_1 > span:nth-child(2), .cruise-route__days-row_3 > span:nth-child(2) {
-  top: 18%;
+  top: -19%;
 }
 @media (min-width: 991.98px) {
   .cruise-route__days-row_1 > span:nth-child(2), .cruise-route__days-row_3 > span:nth-child(2) {
-    top: 30%;
+    top: -24%;
   }
 }
 .cruise-route__days-row_1 > span:nth-child(3), .cruise-route__days-row_3 > span:nth-child(3) {
-  top: 29%;
+  top: -8%;
 }
 @media (min-width: 991.98px) {
   .cruise-route__days-row_1 > span:nth-child(3), .cruise-route__days-row_3 > span:nth-child(3) {
-    top: 39%;
+    top: -18%;
   }
 }
 .cruise-route__days-row_1 > span:nth-child(4), .cruise-route__days-row_3 > span:nth-child(4) {
-  top: 39%;
+  top: 2%;
 }
 @media (min-width: 991.98px) {
   .cruise-route__days-row_1 > span:nth-child(4), .cruise-route__days-row_3 > span:nth-child(4) {
-    top: 55%;
+    top: -8%;
   }
 }
 .cruise-route__days-row_1 > span:nth-child(5), .cruise-route__days-row_3 > span:nth-child(5) {
-  top: 49%;
+  top: 12%;
 }
 @media (min-width: 991.98px) {
   .cruise-route__days-row_1 > span:nth-child(5), .cruise-route__days-row_3 > span:nth-child(5) {
-    top: 69%;
+    top: 5%;
   }
 }
 .cruise-route__days-row_1 > span:nth-child(6), .cruise-route__days-row_3 > span:nth-child(6) {
-  top: 57%;
+  top: 20%;
 }
 @media (min-width: 991.98px) {
   .cruise-route__days-row_1 > span:nth-child(6), .cruise-route__days-row_3 > span:nth-child(6) {
-    top: 77%;
+    top: 19%;
   }
 }
 .cruise-route__days-row_1 > span:nth-child(7), .cruise-route__days-row_3 > span:nth-child(7) {
-  top: 61%;
+  top: 26%;
 }
 @media (min-width: 991.98px) {
   .cruise-route__days-row_1 > span:nth-child(7), .cruise-route__days-row_3 > span:nth-child(7) {
-    top: 79%;
+    top: 27%;
   }
 }
 .cruise-route__days-row_1 > span:nth-child(8), .cruise-route__days-row_3 > span:nth-child(8) {
-  top: 63%;
+  top: 27%;
 }
 @media (min-width: 991.98px) {
   .cruise-route__days-row_1 > span:nth-child(8), .cruise-route__days-row_3 > span:nth-child(8) {
-    top: 77%;
+    top: 30%;
   }
 }
 .cruise-route__days-row_1 > span:nth-child(9), .cruise-route__days-row_3 > span:nth-child(9) {
-  top: 63%;
+  top: 26%;
 }
 @media (min-width: 991.98px) {
   .cruise-route__days-row_1 > span:nth-child(9), .cruise-route__days-row_3 > span:nth-child(9) {
-    top: 70%;
+    top: 30%;
   }
 }
 .cruise-route__days-row_1 > span:nth-child(10), .cruise-route__days-row_3 > span:nth-child(10) {
-  top: 60%;
+  top: 23%;
 }
 @media (min-width: 991.98px) {
   .cruise-route__days-row_1 > span:nth-child(10), .cruise-route__days-row_3 > span:nth-child(10) {
-    top: 55%;
+    top: 23%;
   }
 }
 .cruise-route__days-row_2, .cruise-route__days-row_4 {
@@ -3266,89 +3293,89 @@ h2 {
 }
 @media (min-width: 991.98px) {
   .cruise-route__days-row_2, .cruise-route__days-row_4 {
-    background-image: url("../img/cruise/line-2.svg");
-    aspect-ratio: 1366/348;
-    margin-top: -13.17715959vw;
+    background-image: url("../img/cruise/line-2-pc.svg");
+    aspect-ratio: 1366/200;
+    margin-top: -5.8565153734vw;
   }
 }
 .cruise-route__days-row_2 > span:nth-child(1), .cruise-route__days-row_4 > span:nth-child(1) {
-  top: 7%;
+  top: -30%;
 }
 @media (min-width: 991.98px) {
   .cruise-route__days-row_2 > span:nth-child(1), .cruise-route__days-row_4 > span:nth-child(1) {
-    top: 8%;
+    top: -48%;
   }
 }
 .cruise-route__days-row_2 > span:nth-child(2), .cruise-route__days-row_4 > span:nth-child(2) {
-  top: 18%;
+  top: -19%;
 }
 @media (min-width: 991.98px) {
   .cruise-route__days-row_2 > span:nth-child(2), .cruise-route__days-row_4 > span:nth-child(2) {
-    top: 25%;
+    top: -35%;
   }
 }
 .cruise-route__days-row_2 > span:nth-child(3), .cruise-route__days-row_4 > span:nth-child(3) {
-  top: 29%;
+  top: -8%;
 }
 @media (min-width: 991.98px) {
   .cruise-route__days-row_2 > span:nth-child(3), .cruise-route__days-row_4 > span:nth-child(3) {
-    top: 43%;
+    top: -16%;
   }
 }
 .cruise-route__days-row_2 > span:nth-child(4), .cruise-route__days-row_4 > span:nth-child(4) {
-  top: 39%;
+  top: 2%;
 }
 @media (min-width: 991.98px) {
   .cruise-route__days-row_2 > span:nth-child(4), .cruise-route__days-row_4 > span:nth-child(4) {
-    top: 62%;
+    top: 2%;
   }
 }
 .cruise-route__days-row_2 > span:nth-child(5), .cruise-route__days-row_4 > span:nth-child(5) {
-  top: 49%;
+  top: 12%;
 }
 @media (min-width: 991.98px) {
   .cruise-route__days-row_2 > span:nth-child(5), .cruise-route__days-row_4 > span:nth-child(5) {
-    top: 75%;
+    top: 18%;
   }
 }
 .cruise-route__days-row_2 > span:nth-child(6), .cruise-route__days-row_4 > span:nth-child(6) {
-  top: 57%;
+  top: 20%;
 }
 @media (min-width: 991.98px) {
   .cruise-route__days-row_2 > span:nth-child(6), .cruise-route__days-row_4 > span:nth-child(6) {
-    top: 82%;
+    top: 26%;
   }
 }
 .cruise-route__days-row_2 > span:nth-child(7), .cruise-route__days-row_4 > span:nth-child(7) {
-  top: 61%;
+  top: 26%;
 }
 @media (min-width: 991.98px) {
   .cruise-route__days-row_2 > span:nth-child(7), .cruise-route__days-row_4 > span:nth-child(7) {
-    top: 81%;
+    top: 30%;
   }
 }
 .cruise-route__days-row_2 > span:nth-child(8), .cruise-route__days-row_4 > span:nth-child(8) {
-  top: 63%;
+  top: 27%;
 }
 @media (min-width: 991.98px) {
   .cruise-route__days-row_2 > span:nth-child(8), .cruise-route__days-row_4 > span:nth-child(8) {
-    top: 75%;
+    top: 27%;
   }
 }
 .cruise-route__days-row_2 > span:nth-child(9), .cruise-route__days-row_4 > span:nth-child(9) {
-  top: 63%;
+  top: 26%;
 }
 @media (min-width: 991.98px) {
   .cruise-route__days-row_2 > span:nth-child(9), .cruise-route__days-row_4 > span:nth-child(9) {
-    top: 62%;
+    top: 18%;
   }
 }
 .cruise-route__days-row_2 > span:nth-child(10), .cruise-route__days-row_4 > span:nth-child(10) {
-  top: 60%;
+  top: 23%;
 }
 @media (min-width: 991.98px) {
   .cruise-route__days-row_2 > span:nth-child(10), .cruise-route__days-row_4 > span:nth-child(10) {
-    top: 43%;
+    top: 2%;
   }
 }
 .cruise-route__days-row.hidden {
@@ -3356,6 +3383,7 @@ h2 {
 }
 .cruise-route__days-row span {
   position: relative;
+  cursor: pointer;
 }
 .cruise-route__days-row span.day {
   position: relative;
@@ -3395,6 +3423,14 @@ h2 {
 .cruise-route__days-row span.active::after {
   color: var(--accent-color);
 }
+@media (hover: hover) {
+  .cruise-route__days-row span:hover {
+    color: var(--accent-color);
+  }
+  .cruise-route__days-row span:hover::after {
+    color: var(--accent-color);
+  }
+}
 .cruise-route__images {
   margin-top: -16.6666666667vw;
 }
@@ -3421,6 +3457,10 @@ h2 {
   height: auto;
   overflow: visible;
   opacity: 1;
+}
+.cruise-route__image-test-ibg {
+  padding-bottom: 20%;
+  aspect-ratio: unset;
 }
 @media (min-width: 991.98px) {
   .cruise-route__image-mob {

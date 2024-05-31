@@ -114,8 +114,8 @@
             C = function (e) {
               return _(e) === b;
             },
-            M = [f, v, g, w],
-            A = function (e, t, s, i) {
+            A = [f, v, g, w],
+            M = function (e, t, s, i) {
               e &&
                 "function" == typeof e &&
                 (void 0 === i ? (void 0 === s ? e(t) : e(t, s)) : e(t, s, i));
@@ -125,7 +125,7 @@
                 ? e.classList.add(t)
                 : (e.className += (e.className ? " " : "") + t);
             },
-            O = function (e, t) {
+            k = function (e, t) {
               n
                 ? e.classList.remove(t)
                 : (e.className = e.className
@@ -133,7 +133,7 @@
                     .replace(/^\s+/, "")
                     .replace(/\s+$/, ""));
             },
-            k = function (e) {
+            O = function (e) {
               return e.llTempImage;
             },
             I = function (e, t) {
@@ -197,12 +197,12 @@
                 T(e, g),
                 s &&
                   (t.unobserve_completed && I(e, t),
-                  A(t.callback_applied, e, s));
+                  M(t.callback_applied, e, s));
             },
             U = function (e, t, s) {
               P(e, t.class_loading),
                 T(e, f),
-                s && (z(s, 1), A(t.callback_loading, e, s));
+                s && (z(s, 1), M(t.callback_loading, e, s));
             },
             K = function (e, t, s) {
               s && e.setAttribute(t, s);
@@ -245,7 +245,7 @@
                 (function (e) {
                   return e.toLoadCount > 0;
                 })(t) ||
-                A(e.callback_finish, t);
+                M(e.callback_finish, t);
             },
             te = function (e, t, s) {
               e.addEventListener(t, s), (e.llEvLisnrs[t] = s);
@@ -274,11 +274,11 @@
                 (function (e) {
                   e && (e.toLoadCount -= 1);
                 })(s),
-                O(e, t.class_loading),
+                k(e, t.class_loading),
                 t.unobserve_completed && I(e, s);
             },
             oe = function (e, t, s) {
-              var i = k(e) || e;
+              var i = O(e) || e;
               ie(i) ||
                 (function (e, t, s) {
                   ie(e) || (e.llEvLisnrs = {});
@@ -292,7 +292,7 @@
                       re(t, s, i),
                         P(t, s.class_loaded),
                         T(t, v),
-                        A(s.callback_loaded, t, i),
+                        M(s.callback_loaded, t, i),
                         n || ee(s, i);
                     })(0, e, t, s),
                       ne(i);
@@ -303,7 +303,7 @@
                       re(t, s, i),
                         P(t, s.class_error),
                         T(t, w),
-                        A(s.callback_error, t, i),
+                        M(s.callback_error, t, i),
                         s.restore_on_error && Y(t, $),
                         n || ee(s, i);
                     })(0, e, t, s),
@@ -330,7 +330,7 @@
                           o = r && n ? n : i;
                         o &&
                           ((e.style.backgroundImage = 'url("'.concat(o, '")')),
-                          k(e).setAttribute(d, o),
+                          O(e).setAttribute(d, o),
                           U(e, t, s));
                       })(e, t, s),
                       (function (e, t, s) {
@@ -404,12 +404,12 @@
                 (function (e, t) {
                   L(e) ||
                     C(e) ||
-                    (O(e, t.class_entered),
-                    O(e, t.class_exited),
-                    O(e, t.class_applied),
-                    O(e, t.class_loading),
-                    O(e, t.class_loaded),
-                    O(e, t.class_error));
+                    (k(e, t.class_entered),
+                    k(e, t.class_exited),
+                    k(e, t.class_applied),
+                    k(e, t.class_loading),
+                    k(e, t.class_loaded),
+                    k(e, t.class_error));
                 })(e, t),
                 x(e),
                 R(e);
@@ -425,15 +425,15 @@
                 })(e)
                   ? (function (e, t, s, i) {
                       var n = (function (e) {
-                        return M.indexOf(_(e)) >= 0;
+                        return A.indexOf(_(e)) >= 0;
                       })(e);
                       T(e, "entered"),
                         P(e, s.class_entered),
-                        O(e, s.class_exited),
+                        k(e, s.class_exited),
                         (function (e, t, s) {
                           t.unobserve_entered && I(e, s);
                         })(e, s, i),
-                        A(s.callback_enter, e, t, i),
+                        M(s.callback_enter, e, t, i),
                         n || ae(e, s, i);
                     })(e.target, e, t, s)
                   : (function (e, t, s, i) {
@@ -453,12 +453,12 @@
                                 le(e);
                             })(e),
                             de(e),
-                            O(e, s.class_loading),
+                            k(e, s.class_loading),
                             z(i, -1),
                             x(e),
-                            A(s.callback_cancel, e, t, i));
+                            M(s.callback_cancel, e, t, i));
                         })(e, t, s, i),
-                        A(s.callback_exit, e, t, i));
+                        M(s.callback_exit, e, t, i));
                     })(e.target, e, t, s);
               });
             },
@@ -503,7 +503,7 @@
                       !(function (e, t) {
                         var s;
                         ((s = ve(e)), fe(s).filter(ge)).forEach(function (t) {
-                          O(t, e.class_error), x(t);
+                          k(t, e.class_error), x(t);
                         }),
                           t.update();
                       })(e, s);
@@ -1368,10 +1368,10 @@
         s
       );
     }
-    function M(e, t) {
+    function A(e, t) {
       return g().getComputedStyle(e, null).getPropertyValue(t);
     }
-    function A(e) {
+    function M(e) {
       let t,
         s = e;
       if (s) {
@@ -1400,14 +1400,14 @@
             )
         : e.offsetWidth;
     }
-    function O(e) {
+    function k(e) {
       return (Array.isArray(e) ? e : [e]).filter((e) => !!e);
     }
-    let k, I, z;
+    let O, I, z;
     function D() {
       return (
-        k ||
-          (k = (function () {
+        O ||
+          (O = (function () {
             const e = g(),
               t = f();
             return {
@@ -1421,7 +1421,7 @@
               ),
             };
           })()),
-        k
+        O
       );
     }
     function q(e) {
@@ -1676,12 +1676,12 @@
             (0 === s && e.isVertical()) ||
             ((t =
               t -
-              parseInt(M(i, "padding-left") || 0, 10) -
-              parseInt(M(i, "padding-right") || 0, 10)),
+              parseInt(A(i, "padding-left") || 0, 10) -
+              parseInt(A(i, "padding-right") || 0, 10)),
             (s =
               s -
-              parseInt(M(i, "padding-top") || 0, 10) -
-              parseInt(M(i, "padding-bottom") || 0, 10)),
+              parseInt(A(i, "padding-top") || 0, 10) -
+              parseInt(A(i, "padding-bottom") || 0, 10)),
             Number.isNaN(t) && (t = 0),
             Number.isNaN(s) && (s = 0),
             Object.assign(e, {
@@ -1749,7 +1749,7 @@
             ((L = 0),
             c[i] && (n = c[i]),
             T && e.grid.updateSlide(i, n, c),
-            !c[i] || "none" !== M(n, "display"))
+            !c[i] || "none" !== A(n, "display"))
           ) {
             if ("auto" === s.slidesPerView) {
               C && (c[i].style[e.getDirectionLabel("width")] = "");
@@ -2794,10 +2794,10 @@
         let T = 0,
           x = 0;
         const C = w ? Math.ceil(d.length / h.grid.rows) : d.length,
-          M = (w ? d[r].column : r) + (m && void 0 === n ? -f / 2 + 0.5 : 0);
-        if (M < g) {
-          T = Math.max(g - M, v);
-          for (let e = 0; e < g - M; e += 1) {
+          A = (w ? d[r].column : r) + (m && void 0 === n ? -f / 2 + 0.5 : 0);
+        if (A < g) {
+          T = Math.max(g - A, v);
+          for (let e = 0; e < g - A; e += 1) {
             const t = e - Math.floor(e / C) * C;
             if (w) {
               const e = C - t - 1;
@@ -2805,8 +2805,8 @@
                 d[t].column === e && b.push(t);
             } else b.push(C - t - 1);
           }
-        } else if (M + f > C - g) {
-          x = Math.max(M - (C - 2 * g), v);
+        } else if (A + f > C - g) {
+          x = Math.max(A - (C - 2 * g), v);
           for (let e = 0; e < x; e += 1) {
             const t = e - Math.floor(e / C) * C;
             w
@@ -4002,8 +4002,8 @@
       }
       getSlideIndex(e) {
         const { slidesEl: t, params: s } = this,
-          i = A(x(t, `.${s.slideClass}, swiper-slide`)[0]);
-        return A(e) - i;
+          i = M(x(t, `.${s.slideClass}, swiper-slide`)[0]);
+        return M(e) - i;
       }
       getSlideIndexByData(e) {
         return this.getSlideIndex(
@@ -4216,11 +4216,11 @@
                 : n,
             hostEl: t.isElement ? s.parentNode.host : s,
             mounted: !0,
-            rtl: "rtl" === s.dir.toLowerCase() || "rtl" === M(s, "direction"),
+            rtl: "rtl" === s.dir.toLowerCase() || "rtl" === A(s, "direction"),
             rtlTranslate:
               "horizontal" === t.params.direction &&
-              ("rtl" === s.dir.toLowerCase() || "rtl" === M(s, "direction")),
-            wrongRTL: "-webkit-box" === M(n, "display"),
+              ("rtl" === s.dir.toLowerCase() || "rtl" === A(s, "direction")),
+            wrongRTL: "-webkit-box" === A(n, "display"),
           }),
           !0
         );
@@ -4361,7 +4361,7 @@
       }
       function o(e, s) {
         const i = t.params.navigation;
-        (e = O(e)).forEach((e) => {
+        (e = k(e)).forEach((e) => {
           e &&
             (e.classList[s ? "add" : "remove"](...i.disabledClass.split(" ")),
             "BUTTON" === e.tagName && (e.disabled = s),
@@ -4415,8 +4415,8 @@
         let s = r(e.nextEl),
           i = r(e.prevEl);
         Object.assign(t.navigation, { nextEl: s, prevEl: i }),
-          (s = O(s)),
-          (i = O(i));
+          (s = k(s)),
+          (i = k(i));
         const n = (s, i) => {
           s && s.addEventListener("click", "next" === i ? d : l),
             !t.enabled && s && s.classList.add(...e.lockClass.split(" "));
@@ -4425,7 +4425,7 @@
       }
       function u() {
         let { nextEl: e, prevEl: s } = t.navigation;
-        (e = O(e)), (s = O(s));
+        (e = k(e)), (s = k(s));
         const i = (e, s) => {
           e.removeEventListener("click", "next" === s ? d : l),
             e.classList.remove(...t.params.navigation.disabledClass.split(" "));
@@ -4455,8 +4455,8 @@
         }),
         i("enable disable", () => {
           let { nextEl: e, prevEl: s } = t.navigation;
-          (e = O(e)),
-            (s = O(s)),
+          (e = k(e)),
+            (s = k(s)),
             t.enabled
               ? a()
               : [...e, ...s]
@@ -4467,7 +4467,7 @@
         }),
         i("click", (e, s) => {
           let { nextEl: i, prevEl: r } = t.navigation;
-          (i = O(i)), (r = O(r));
+          (i = k(i)), (r = k(r));
           const o = s.target;
           if (
             t.params.navigation.hideOnClick &&
@@ -4851,15 +4851,28 @@
         t.classList.add("_icon-arrow"), t.setAttribute("data-spoller", "");
       });
     function he() {
-      const e = document.querySelector(".menu");
-      if (window.matchMedia("(min-width: 1024px)").matches) {
-        function t(e) {
+      const e = document.querySelector(".menu"),
+        t = document.querySelectorAll(".menu-item"),
+        s = document.querySelectorAll(".sub-menu");
+      if (
+        (console.log(t.length),
+        t.forEach((e) => {
+          e.closest(".header") && e.classList.add("menu-item_h"),
+            e.closest(".footer") && e.classList.add("menu-item_f");
+        }),
+        s.forEach((e) => {
+          e.closest(".header") && e.classList.add("sub-menu_h"),
+            e.closest(".footer") && e.classList.add("sub-menu_f");
+        }),
+        window.matchMedia("(min-width: 1024px)").matches)
+      ) {
+        function i(e) {
           e.target.closest(".menu-item-has-children a");
         }
-        e.onmouseover = e.onmouseout = t;
-        const s = document.querySelectorAll(".menu__list");
-        s &&
-          s.forEach((e) => {
+        e.onmouseover = e.onmouseout = i;
+        const n = document.querySelectorAll(".menu__list");
+        n &&
+          n.forEach((e) => {
             function t(e = null) {
               const t = [];
               if (e) {
@@ -5063,6 +5076,12 @@
             e.addEventListener("click", () => {
               c(t);
             });
+          }),
+          document.addEventListener("keydown", function (t) {
+            document.querySelector(".day.active"),
+              "ArrowLeft" === t.key
+                ? c((d - 1 + e.children.length) % e.children.length)
+                : "ArrowRight" === t.key && c((d + 1) % e.children.length);
           });
       })(),
       (window.FLS = !0),
