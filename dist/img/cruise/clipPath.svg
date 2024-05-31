@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="clipPath0">
+    <clipPath id="clipPath0-def">
+      <path d="M570.637 326.893C574.311 498.062 391.804 662.808 58.3099 689.97C-136.471 705.835 -100.455 508.427 -104.129 337.258C-107.802 166.089 -338.754 -9.89754 -25.7995 0.811298C145.369 -2.86253 566.963 155.724 570.637 326.893Z"/>
+    </clipPath>
+  </symbol>
+  <symbol id="clipPath1">
+    <clipPath id="clipPath1-def">
+      <path d="M146 56C25.1153 10.943 0 0 0 0V270H480V89.5C369.5 110 278 105.2 146 56Z"/>
+    </clipPath>
+  </symbol>
+</svg>
