@@ -29,14 +29,21 @@
     @media (min-width:$tablet){
       display: grid;
       gap: vwpc(8);
-      align-self: end;
+      position: relative;
+      // align-self: end;
+
+
+      // &_home {
+      //   align-self: center;
+      // }
     }
   }
 
   // .header__breadcrumbs
-  &__breadcrumbs {}
-
-
+  &__breadcrumbs {
+    position: absolute;
+    top: 110%;
+  }
 
 
   // .header__socials

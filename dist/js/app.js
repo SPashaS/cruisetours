@@ -4911,37 +4911,7 @@
         });
     })(document.querySelectorAll(".menu__list > .menu-item-has-children"), 1),
       he(),
-      window.addEventListener("resize", he);
-    document.querySelectorAll("[data-show-more]").forEach((e) => {
-      const s = e.querySelector("[data-show-more-btn]"),
-        n = e.querySelector("[data-show-more-content]"),
-        r = n.dataset.showMoreContent,
-        o = n.children;
-      let a = 0;
-      const l = () => {
-        for (let e = 0; e < o.length; e++) {
-          const s = o[e];
-          e >= r &&
-            (setTimeout(function () {
-              s.classList.add("hidden");
-            }, 200),
-            t(s, 200));
-        }
-      };
-      l(),
-        s.addEventListener("click", function (t) {
-          a
-            ? (l(), e.classList.remove("_showmore-active"), (a = 0))
-            : ((a = 1),
-              e.classList.add("_showmore-active"),
-              (() => {
-                for (let e = 0; e < o.length; e++) {
-                  const t = o[e];
-                  e >= r && (t.classList.remove("hidden"), i(t, 200));
-                }
-              })());
-        });
-    }),
+      window.addEventListener("resize", he),
       document.addEventListener("DOMContentLoaded", function () {
         const e = document.querySelectorAll(".tariffs__nav-item"),
           t = document.querySelectorAll(".tariffs__item");
@@ -5083,7 +5053,44 @@
                 ? c((d - 1 + e.children.length) % e.children.length)
                 : "ArrowRight" === t.key && c((d + 1) % e.children.length);
           });
-      })(),
+      })();
+    document.querySelectorAll("[data-show-more]").forEach((e) => {
+      const s = e.querySelector("[data-show-more-content]"),
+        n = parseInt(s.dataset.showMoreContent, 10),
+        r = s.children;
+      let o = 0;
+      const a = () => {
+        for (let e = 0; e < r.length; e++) {
+          const s = r[e];
+          e >= n &&
+            (setTimeout(() => {
+              s.classList.add("hidden");
+            }, 200),
+            t(s, 200));
+        }
+      };
+      if (r.length > n) {
+        const t = document.createElement("button");
+        (t.type = "button"),
+          (t.className = "promotion__btn-more btn-more _icon-arrow"),
+          t.setAttribute("data-show-more-btn", ""),
+          (t.innerHTML = "<span>Показать еще</span><span>Скрыть</span>"),
+          e.appendChild(t),
+          a(),
+          t.addEventListener("click", () => {
+            o
+              ? (a(), e.classList.remove("_showmore-active"), (o = 0))
+              : ((o = 1),
+                e.classList.add("_showmore-active"),
+                (() => {
+                  for (let e = 0; e < r.length; e++) {
+                    const t = r[e];
+                    e >= n && (t.classList.remove("hidden"), i(t, 200));
+                  }
+                })());
+          });
+      }
+    }),
       (window.FLS = !0),
       window.addEventListener("load", function () {
         setTimeout(function () {

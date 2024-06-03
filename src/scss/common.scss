@@ -1,11 +1,21 @@
 // Заголовки, общие БЄМ блоки и проче...
 
+h1 {
+  margin-bottom: vwm(10);
+
+  @media (min-width:$tablet){
+    margin-bottom: vwpc(15); 
+  }
+}
+
 h2 {
   font-weight: 600;
   font-size: vwm(30);
+  margin-bottom: vwm(15);
 
   @media (min-width:$tablet) {
     font-size: vwpc(60);
+    margin-bottom: vwpc(50);
   }
 }
 

@@ -40,6 +40,31 @@ function menu() {
   const menu = document.querySelector('.menu');
   const breakpointMenu = '(min-width: 1024px)';
 
+  const menuItems = document.querySelectorAll('.menu-item');
+  const subMenus = document.querySelectorAll('.sub-menu');
+
+  console.log(menuItems.length);
+
+  menuItems.forEach(el => {
+
+    if (el.closest('.header')) {
+      el.classList.add('menu-item_h')
+    }
+    if (el.closest('.footer')) {
+      el.classList.add('menu-item_f')
+    }
+  });
+
+  subMenus.forEach(el => {
+
+    if (el.closest('.header')) {
+      el.classList.add('sub-menu_h')
+    }
+    if (el.closest('.footer')) {
+      el.classList.add('sub-menu_f')
+    }
+  });
+
   if (window.matchMedia(breakpointMenu).matches) {
     menu.onmouseover = menu.onmouseout = handler;
     function handler(event) {
@@ -109,55 +134,60 @@ window.addEventListener('resize', menu);
 
 // showmore
 
-const showMoreArr = document.querySelectorAll('[data-show-more]');
-showMoreArr.forEach((showMore) => {
-  const showMoreBtn = showMore.querySelector('[data-show-more-btn]');
-  const showMoreWrapper = showMore.querySelector('[data-show-more-content]');
-  const quantityHideElements = showMoreWrapper.dataset.showMoreContent;
-  const showMoreWrapperChildren = showMoreWrapper.children;
+// const showMoreArr = document.querySelectorAll('[data-show-more]');
+// showMoreArr.forEach((showMore) => {
+//   const showMoreBtn = showMore.querySelector('[data-show-more-btn]');
+//   const showMoreWrapper = showMore.querySelector('[data-show-more-content]');
+//   const quantityHideElements = showMoreWrapper.dataset.showMoreContent;
+//   const showMoreWrapperChildren = showMoreWrapper.children;
 
-  let status = 0;
+//   let status = 0;
 
-  const hide = () => {
-    for (let i = 0; i < showMoreWrapperChildren.length; i++) {
-      const showMoreWrapperChild = showMoreWrapperChildren[i];
-      if (i >= quantityHideElements) {
+//   const hide = () => {
+//     for (let i = 0; i < showMoreWrapperChildren.length; i++) {
+//       const showMoreWrapperChild = showMoreWrapperChildren[i];
+//       if (i >= quantityHideElements) {
 
-        setTimeout(function() {
-          showMoreWrapperChild.classList.add('hidden');
-        },  200);
+//         setTimeout(function() {
+//           showMoreWrapperChild.classList.add('hidden');
+//         },  200);
 
-        _slideUp(showMoreWrapperChild,200);
-      }
-    }
-  };
+//         _slideUp(showMoreWrapperChild,200);
+//       }
+//     }
+//   };
 
-  const show = () => {
-    for (let i = 0; i < showMoreWrapperChildren.length; i++) {
-      const showMoreWrapperChild = showMoreWrapperChildren[i];
-      if (i >= quantityHideElements) {
+//   const show = () => {
+//     for (let i = 0; i < showMoreWrapperChildren.length; i++) {
+//       const showMoreWrapperChild = showMoreWrapperChildren[i];
+//       if (i >= quantityHideElements) {
         
-        showMoreWrapperChild.classList.remove('hidden');
-        _slideDown(showMoreWrapperChild,200);
+//         showMoreWrapperChild.classList.remove('hidden');
+//         _slideDown(showMoreWrapperChild,200);
 
-      }
-    }
-  };
+//       }
+//     }
+//   };
 
-  hide();
+//   hide();
 
-  showMoreBtn.addEventListener('click', function (e) {
-    if (!status) {
-      status = 1;
-      showMore.classList.add('_showmore-active');
-      show();
-    } else {
-      hide();
-      showMore.classList.remove('_showmore-active');
-      status = 0;
-    }
-  });
-});
+//   showMoreBtn.addEventListener('click', function (e) {
+//     if (!status) {
+//       status = 1;
+//       showMore.classList.add('_showmore-active');
+//       show();
+//     } else {
+//       hide();
+//       showMore.classList.remove('_showmore-active');
+//       status = 0;
+//     }
+//   });
+// });
+
+
+
+
+
 
 // slider
 
@@ -480,9 +510,84 @@ function slider() {
       updateActiveElements(index);
     });
   });
+
+  document.addEventListener('keydown', function(event) {
+    const activeDay = document.querySelector('.day.active');
+    let nextDay;
+  
+    if (event.key === 'ArrowLeft') {
+      let newIndex = (currentEl - 1 + descs.children.length) % descs.children.length;
+      updateActiveElements(newIndex);
+    } else if (event.key === 'ArrowRight') {
+      let newIndex = (currentEl + 1) % descs.children.length;
+      updateActiveElements(newIndex);
+    }
+  
+    if (nextDay) {
+      updateActiveElements([...daysQuantity].indexOf(nextDay));
+    }
+  });
+
 }
 
 const bodySlider = document.querySelector('.cruise-route__body');
 if (bodySlider) {
   slider();
 }
+
+//slider 
+
+const showMoreArr = document.querySelectorAll('[data-show-more]');
+showMoreArr.forEach((showMore) => {
+  const showMoreWrapper = showMore.querySelector('[data-show-more-content]');
+  const quantityHideElements = parseInt(showMoreWrapper.dataset.showMoreContent, 10);
+  const showMoreWrapperChildren = showMoreWrapper.children;
+
+  let status = 0;
+
+  const hide = () => {
+    for (let i = 0; i < showMoreWrapperChildren.length; i++) {
+      const showMoreWrapperChild = showMoreWrapperChildren[i];
+      if (i >= quantityHideElements) {
+        setTimeout(() => {
+          showMoreWrapperChild.classList.add('hidden');
+        }, 200);
+        _slideUp(showMoreWrapperChild, 200);
+      }
+    }
+  };
+
+  const show = () => {
+    for (let i = 0; i < showMoreWrapperChildren.length; i++) {
+      const showMoreWrapperChild = showMoreWrapperChildren[i];
+      if (i >= quantityHideElements) {
+        showMoreWrapperChild.classList.remove('hidden');
+        _slideDown(showMoreWrapperChild, 200);
+      }
+    }
+  };
+
+  // Проверка количества элементов и создание кнопки
+  if (showMoreWrapperChildren.length > quantityHideElements) {
+    const showMoreBtn = document.createElement('button');
+    showMoreBtn.type = 'button';
+    showMoreBtn.className = 'promotion__btn-more btn-more _icon-arrow';
+    showMoreBtn.setAttribute('data-show-more-btn', '');
+    showMoreBtn.innerHTML = '<span>Показать еще</span><span>Скрыть</span>';
+    showMore.appendChild(showMoreBtn);
+
+    hide();
+
+    showMoreBtn.addEventListener('click', () => {
+      if (!status) {
+        status = 1;
+        showMore.classList.add('_showmore-active');
+        show();
+      } else {
+        hide();
+        showMore.classList.remove('_showmore-active');
+        status = 0;
+      }
+    });
+  }
+});

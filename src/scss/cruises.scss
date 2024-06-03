@@ -151,12 +151,8 @@
   &__card {
 
     .card__image {
-      box-shadow: 0 vwm(4) vwm(3) 0 rgba(0, 0, 0, 0.25), 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+      box-shadow: 0 4px 3px 0 rgba(0, 0, 0, 0.25), 0 4px 4px 0 rgba(0, 0, 0, 0.25);
 
-      @media (min-width:$tablet) {
-        box-shadow: 0 vwpc(4) vwpc(3) 0 rgba(0, 0, 0, 0.25), 0 4px 4px 0 rgba(0, 0, 0, 0.25);
-
-      }
     }
 
   }
@@ -228,7 +224,8 @@
   &__image {
 
     width: 100%;
-    aspect-ratio: 215/176;
+    // aspect-ratio: 215/176;
+    height: vwm(176);
 
     overflow: hidden;
 
@@ -242,11 +239,21 @@
 
     @media (min-width:$tablet) {
       justify-content: center;
-      aspect-ratio: 482/300;
+      // aspect-ratio: 482/300;
+      height: vwpc(482);
       padding: vwpc(13) vwpc(20);
       border-radius: vwpc(35);
       justify-content: flex-start;
     }
+
+    @media (hover: hover) {
+      &:hover {
+        .card__title {
+          color: var(--accent-color);
+        }
+      }
+    }
+    
   }
 
 
@@ -258,7 +265,7 @@
     color: var(--light-text-color);
     // width: 70%;
     text-align: left;
-
+    transition: all 0.3s ease 0s;
 
     @media (min-width:$tablet) {
       text-align: left;
@@ -415,7 +422,7 @@
 
   // .promo-cruise__text
   &__text {
-
+    padding-top: vwm(25);
     @media (min-width:$tablet) {
       padding-top: vwpc(65);
     }
@@ -663,13 +670,7 @@
         @media (max-width:$tablet) {
           padding-left: vwm(10);
 
-
         }
-
-
-
-
-
 
       }
     }
@@ -703,7 +704,8 @@
     background-image: url("@img/cruise/decor-line.svg");
     background-size: cover;
     width: vwm(377);
-    aspect-ratio: 377/590;
+    height: vwm(590);
+    // aspect-ratio: 377/590;
 
     position: absolute;
     z-index: -1;
@@ -751,6 +753,7 @@
   // .cruise-route__days-row
   &__days-row {
     display: grid;
+    align-items: center;
     justify-items: center;
     grid-template-columns: repeat(10, 1fr);
     padding: 0 vwm(5);
@@ -766,93 +769,96 @@
     &_1,
     &_3 {
       background-image: url("@img/cruise/line-1.svg");
-      aspect-ratio: 480/161;
+      width: 100%;
+      height: vwm(161);
       background-size: cover;
 
       @media (min-width:$tablet) {
         background-image: url("@img/cruise/line-1-pc.svg");
-        aspect-ratio: 1366/324;
+        height: vwpc(200);
+        // aspect-ratio: 1366/200;
+
       }
 
       &>span:nth-child(1) {
-        top: 7%;
+        top: -30%;
 
         @media (min-width:$tablet) {
-          top: 25%;
+          top: -29%;
         }
       }
 
 
       &>span:nth-child(2) {
-        top: 18%;
+        top: -19%;
+
+        @media (min-width:$tablet) {
+          top: -24%;
+        }
+      }
+
+
+      &>span:nth-child(3) {
+        top: -8%;
+
+        @media (min-width:$tablet) {
+          top: -18%;
+        }
+      }
+
+      &>span:nth-child(4) {
+        top: 2%;
+
+        @media (min-width:$tablet) {
+          top: -8%;
+        }
+      }
+
+      &>span:nth-child(5) {
+        top: 12%;
+
+        @media (min-width:$tablet) {
+          top: 5%;
+        }
+      }
+
+      &>span:nth-child(6) {
+        top: 20%;
+
+        @media (min-width:$tablet) {
+          top: 19%;
+        }
+      }
+
+      &>span:nth-child(7) {
+        top: 26%;
+
+        @media (min-width:$tablet) {
+          top: 27%;
+        }
+      }
+
+      &>span:nth-child(8) {
+        top: 27%;
 
         @media (min-width:$tablet) {
           top: 30%;
         }
       }
 
-
-      &>span:nth-child(3) {
-        top: 29%;
-
-        @media (min-width:$tablet) {
-          top: 39%;
-        }
-      }
-
-      &>span:nth-child(4) {
-        top: 39%;
-
-        @media (min-width:$tablet) {
-          top: 55%;
-        }
-      }
-
-      &>span:nth-child(5) {
-        top: 49%;
-
-        @media (min-width:$tablet) {
-          top: 69%;
-        }
-      }
-
-      &>span:nth-child(6) {
-        top: 57%;
-
-        @media (min-width:$tablet) {
-          top: 77%;
-        }
-      }
-
-      &>span:nth-child(7) {
-        top: 61%;
-
-        @media (min-width:$tablet) {
-          top: 79%;
-        }
-      }
-
-      &>span:nth-child(8) {
-        top: 63%;
-
-        @media (min-width:$tablet) {
-          top: 77%;
-        }
-      }
-
       &>span:nth-child(9) {
-        top: 63%;
+        top: 26%;
 
         @media (min-width:$tablet) {
-          top: 70%;
+          top: 30%;
         }
       }
 
       &>span:nth-child(10) {
-        top: 60%;
+        top: 23%;
 
         @media (min-width:$tablet) {
-          top: 55%;
+          top: 23%;
         }
       }
     }
@@ -867,90 +873,90 @@
       margin-top: vwm(-80);
 
       @media (min-width:$tablet) {
-        background-image: url("@img/cruise/line-2.svg");
-        aspect-ratio: 1366/348;
-        margin-top: vwpc(-180);
+        background-image: url("@img/cruise/line-2-pc.svg");
+        aspect-ratio: 1366/200;
+        margin-top: vwpc(-80);
       }
 
 
       &>span:nth-child(1) {
-        top: 7%;
+        top: -30%;
 
         @media (min-width:$tablet) {
-          top: 8%;
+          top: -48%;
         }
       }
 
 
       &>span:nth-child(2) {
-        top: 18%;
+        top: -19%;
 
         @media (min-width:$tablet) {
-          top: 25%;
+          top: -35%;
         }
       }
 
       &>span:nth-child(3) {
-        top: 29%;
+        top: -8%;
 
         @media (min-width:$tablet) {
-          top: 43%;
+          top: -16%;
         }
       }
 
       &>span:nth-child(4) {
-        top: 39%;
+        top: 2%;
 
         @media (min-width:$tablet) {
-          top: 62%;
+          top: 2%;
         }
       }
 
       &>span:nth-child(5) {
-        top: 49%;
+        top: 12%;
 
         @media (min-width:$tablet) {
-          top: 75%;
+          top: 18%;
         }
       }
 
       &>span:nth-child(6) {
-        top: 57%;
+        top: 20%;
 
         @media (min-width:$tablet) {
-          top: 82%;
+          top: 26%;
         }
       }
 
       &>span:nth-child(7) {
-        top: 61%;
+        top: 26%;
 
         @media (min-width:$tablet) {
-          top: 81%;
+          top: 30%;
         }
       }
 
       &>span:nth-child(8) {
-        top: 63%;
+        top: 27%;
 
         @media (min-width:$tablet) {
-          top: 75%;
+          top: 27%;
         }
       }
 
       &>span:nth-child(9) {
-        top: 63%;
+        top: 26%;
 
         @media (min-width:$tablet) {
-          top: 62%;
+          top: 18%;
         }
       }
 
       &>span:nth-child(10) {
-        top: 60%;
+        top: 23%;
 
         @media (min-width:$tablet) {
-          top: 43%;
+          top: 2%;
         }
       }
 
@@ -966,6 +972,7 @@
 
     span {
       position: relative;
+      cursor: pointer;
       // display: flex;
       // flex-direction: column;
 
@@ -1004,6 +1011,7 @@
             margin-top: vwpc(3);
           }
         }
+
       }
 
 
@@ -1013,10 +1021,20 @@
 
         &::after {
           color: var(--accent-color);
-
         }
-
       }
+
+      @media (hover: hover) {
+        &:hover {
+          color: var(--accent-color);
+
+          &::after {
+            color: var(--accent-color);
+          }
+        }
+      }
+
+
     }
   }
 
@@ -1032,12 +1050,15 @@
 
   // .cruise-route__image
   &__image {
+    display: block;
     height: 0;
+    padding-bottom: 0;
     overflow: hidden;
     opacity: 0;
-    transition: all 1.3s ease 0s;
+    transition: opacity 1.3s ease 0s;
     width: 100%;
-    aspect-ratio: 480/270;
+    // aspect-ratio: 480/270;
+    
 
     @media (min-width:$tablet) {
       // width: 571px;
@@ -1049,6 +1070,13 @@
       height: auto;
       overflow: visible;
       opacity: 1;
+      padding-bottom: percent(270,480);
+      
+      @media (min-width:$tablet){
+        padding-bottom: percent(571,691);
+          
+      }
+      
     }
 
   }
