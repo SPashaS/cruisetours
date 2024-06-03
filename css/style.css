@@ -2,15 +2,15 @@
 @font-face {
   font-family: AlumniSans;
   font-display: swap;
-  src: url("../fonts/AlumniSans-Light.woff2") format("woff2"), url("../fonts/AlumniSans-Light.woff") format("woff");
-  font-weight: 300;
+  src: url("../fonts/AlumniSans-Bold.woff2") format("woff2"), url("../fonts/AlumniSans-Bold.woff") format("woff");
+  font-weight: 700;
   font-style: normal;
 }
 @font-face {
   font-family: AlumniSans;
   font-display: swap;
-  src: url("../fonts/AlumniSans-Bold.woff2") format("woff2"), url("../fonts/AlumniSans-Bold.woff") format("woff");
-  font-weight: 700;
+  src: url("../fonts/AlumniSans-Light.woff2") format("woff2"), url("../fonts/AlumniSans-Light.woff") format("woff");
+  font-weight: 300;
   font-style: normal;
 }
 @font-face {
@@ -97,6 +97,14 @@
 
 ._icon-location:before {
   content: "\e908";
+}
+
+._icon-viber:before {
+  content: "\e909";
+}
+
+._icon-whatsapp:before {
+  content: "\e90a";
 }
 
 :root {
@@ -1036,8 +1044,12 @@ h2 {
   .header__main {
     display: grid;
     gap: 0.5856515373vw;
-    align-self: end;
+    position: relative;
   }
+}
+.header__breadcrumbs {
+  position: absolute;
+  top: 110%;
 }
 .header__socials .socials__item::before {
   font-size: 5.8333333333vw;
@@ -2046,7 +2058,7 @@ h2 {
 }
 .promotion-card__image {
   width: 100%;
-  aspect-ratio: 479/546;
+  height: 113.75vw;
   overflow: hidden;
   display: flex;
   align-items: flex-end;
@@ -2055,7 +2067,7 @@ h2 {
 }
 @media (min-width: 991.98px) {
   .promotion-card__image {
-    aspect-ratio: 273/203;
+    height: 14.8609077599vw;
     padding: 0.9516837482vw 1.4641288433vw;
     border-radius: 2.5622254758vw;
     justify-content: flex-start;
@@ -2225,6 +2237,7 @@ h2 {
   }
 }
 
+.thanks,
 .application {
   background-image: url("../img/application/mob.jpg");
   background-size: cover;
@@ -2233,6 +2246,7 @@ h2 {
   padding: 6.25vw 9.375vw 10.4166666667vw;
 }
 @media (min-width: 991.98px) {
+  .thanks,
   .application {
     padding: 2.5622254758vw 9.5168374817vw 3.2942898975vw;
     background-image: url("../img/application/pc.jpg");
@@ -2240,6 +2254,7 @@ h2 {
     border-radius: 2.196193265vw;
   }
 }
+
 .application__header {
   display: grid;
   justify-items: center;
@@ -2432,6 +2447,62 @@ h2 {
   .form__submit .btn:hover {
     color: var(--accent-color);
     border-color: var(--accent-color);
+  }
+}
+
+@media (max-width: 991.98px) {
+  .thanks {
+    padding: 9.375vw 0 14.5833333333vw;
+    font-size: 5.2083333333vw;
+  }
+}
+.thanks__body {
+  background: rgba(255, 255, 255, 0.45);
+  border-radius: 0.7320644217vw;
+  color: var(--dark-color);
+  display: grid;
+  justify-items: center;
+  text-align: center;
+  padding: 3.125vw 7.2916666667vw 6.25vw;
+  margin-bottom: 4.1666666667vw;
+}
+@media (min-width: 991.98px) {
+  .thanks__body {
+    padding: 0.7320644217vw 2.9282576867vw 1.0980966325vw;
+    margin-bottom: 3.6603221083vw;
+  }
+}
+.thanks__title {
+  font-weight: 600;
+  font-size: 8.3333333333vw;
+}
+@media (min-width: 991.98px) {
+  .thanks__title {
+    font-size: 2.196193265vw;
+  }
+}
+.thanks__contacts {
+  display: grid;
+  justify-items: center;
+  text-align: center;
+  gap: 2.0833333333vw;
+}
+@media (min-width: 991.98px) {
+  .thanks__contacts {
+    gap: 0.3660322108vw;
+  }
+}
+.thanks__socials {
+  display: flex;
+}
+@media (max-width: 991.98px) {
+  .thanks__socials .socials__item::before {
+    font-size: 6.6666666667vw;
+  }
+}
+@media (min-width: 991.98px) {
+  .thanks__socials {
+    gap: 0.7320644217vw;
   }
 }
 
@@ -2783,12 +2854,7 @@ h2 {
   }
 }
 .cruises__card .card__image {
-  box-shadow: 0 0.8333333333vw 0.625vw 0 rgba(0, 0, 0, 0.25), 0 4px 4px 0 rgba(0, 0, 0, 0.25);
-}
-@media (min-width: 991.98px) {
-  .cruises__card .card__image {
-    box-shadow: 0 0.2928257687vw 0.2196193265vw 0 rgba(0, 0, 0, 0.25), 0 4px 4px 0 rgba(0, 0, 0, 0.25);
-  }
+  box-shadow: 0 4px 3px 0 rgba(0, 0, 0, 0.25), 0 4px 4px 0 rgba(0, 0, 0, 0.25);
 }
 .cruises__btn {
   display: none;
@@ -2840,7 +2906,7 @@ h2 {
 }
 .card__image {
   width: 100%;
-  aspect-ratio: 215/176;
+  height: 36.6666666667vw;
   overflow: hidden;
   display: flex;
   align-items: flex-end;
@@ -2852,10 +2918,15 @@ h2 {
 @media (min-width: 991.98px) {
   .card__image {
     justify-content: center;
-    aspect-ratio: 482/300;
+    height: 35.2855051245vw;
     padding: 0.9516837482vw 1.4641288433vw;
     border-radius: 2.5622254758vw;
     justify-content: flex-start;
+  }
+}
+@media (hover: hover) {
+  .card__image:hover .card__title {
+    color: var(--accent-color);
   }
 }
 .card__title {
@@ -2864,6 +2935,7 @@ h2 {
   z-index: 1;
   color: var(--light-text-color);
   text-align: left;
+  transition: all 0.3s ease 0s;
 }
 @media (min-width: 991.98px) {
   .card__title {
@@ -2936,6 +3008,9 @@ h2 {
   .promo-cruise__title {
     font-size: 5.8565153734vw;
   }
+}
+.promo-cruise__text {
+  padding-top: 5.2083333333vw;
 }
 @media (min-width: 991.98px) {
   .promo-cruise__text {
@@ -3139,7 +3214,7 @@ h2 {
   background-image: url("../img/cruise/decor-line.svg");
   background-size: cover;
   width: 78.5416666667vw;
-  aspect-ratio: 377/590;
+  height: 122.9166666667vw;
   position: absolute;
   z-index: -1;
   bottom: -68.75vw;
