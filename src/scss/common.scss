@@ -635,7 +635,7 @@ h4 {
 
 
     li {
-      display: inline-flex;
+      display: flex;
 
       &::before {
         content: '•';
