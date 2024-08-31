@@ -136,7 +136,7 @@ export let bodyLockToggle = (delay = 0) => {
 		bodyUnlock(delay);
 	} else {
 		bodyLock(delay);
-		console.log('lock');
+		// console.log('lock');
 	}
 }
 export let bodyUnlock = (delay = 0) => {
@@ -467,25 +467,55 @@ export function tabs() {
 	}
 }
 // Модуль работы с меню (бургер) =======================================================================================================================================================================================================================
+// export function menuInit() {
+// 	let iconMenu = document.querySelector(".icon-menu");
+// 	if (iconMenu) {
+// 		iconMenu.addEventListener("click", function (e) {
+// 			if (bodyLockStatus) {
+// 				bodyLockToggle();
+// 				document.documentElement.classList.toggle("menu-open");
+// 			}
+
+
+// 		});
+// 	};
+// }
+
+
 export function menuInit() {
 	let iconMenu = document.querySelector(".icon-menu");
 	if (iconMenu) {
 		iconMenu.addEventListener("click", function (e) {
 			if (bodyLockStatus) {
-				bodyLockToggle();
-				// closeOpenSubMenu();
-				document.documentElement.classList.toggle("menu-open");
+				if (!document.documentElement.classList.contains("menu-open")) {
+					document.documentElement.classList.add("menu-open");
+					bodyLock();
+				} else {
+					document.documentElement.classList.remove("menu-open");
+					bodyUnlock();
+					closeAllSubMenus();
+				}
 			}
 		});
 	};
 }
+
 export function menuOpen() {
 	bodyLock();
 	document.documentElement.classList.add("menu-open");
 }
 export function menuClose() {
 	bodyUnlock();
+	closeAllSubMenus();
 	document.documentElement.classList.remove("menu-open");
+}
+
+export function closeAllSubMenus() {
+  const openSubMenus = document.querySelectorAll('.menu-item-has-children.sub-menu_open');
+  openSubMenus.forEach(parentItem => {
+    parentItem.classList.remove('sub-menu_open');
+  });
+
 }
 // Модуль "показать еще" =======================================================================================================================================================================================================================
 /*

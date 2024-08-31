@@ -147,71 +147,81 @@
     gap: vwpc(10);
   }
 
-  &::before {
-    content: '';
+  img {
     width: 100%;
-    aspect-ratio: 1/1;
     background-size: cover;
     background-position: center;
 
+    position: relative;
   }
 
+  // &::before {
+  //   content: '';
+  //   width: 100%;
+  //   padding-bottom: 100%;
+  //   aspect-ratio: 1/1;
+  //   background-size: cover;
+  //   background-position: center;
 
-  // .advantage_family
-  &_family {
-    &::before {
-      background-image: url("@img/icons-c/fleet/family.png");
-    }
-  }
+  // }
 
-  // .advantage_lowcost
-  &_lowcost {
-    &::before {
-      background-image: url("@img/icons-c/fleet/lowcost.png");
-    }
-  }
 
-  // .advantage_entertainment
-  &_entertainment {
-    &::before {
-      background-image: url("@img/icons-c/fleet/entertainment.png");
-    }
-  }
+  // // .advantage_family
+  // &_family {
+  //   &::before {
+  //     background-image: url("@img/icons-c/fleet/family.png");
+  //   }
+  // }
 
-  &_food {
-    &::before {
-      background-image: url("@img/icons-c/fleet/food.png");
-    }
-  }
+  // // .advantage_lowcost
+  // &_lowcost {
+  //   &::before {
+  //     background-image: url("@img/icons-c/fleet/lowcost.png");
+  //   }
+  // }
 
-  &_romantic {
-    &::before {
-      background-image: url("@img/icons-c/fleet/romantic.png");
-    }
-  }
+  // // .advantage_entertainment
+  // &_entertainment {
+  //   &::before {
+  //     background-image: url("@img/icons-c/fleet/entertainment.png");
+  //   }
+  // }
 
-  &_designe {
-    &::before {
-      background-image: url("@img/icons-c/fleet/designe.png");
-    }
-  }
+  // &_food {
+  //   &::before {
+  //     background-image: url("@img/icons-c/fleet/food.png");
+  //   }
+  // }
 
-  &_family-wt {
-    &::before {
-      background-image: url("@img/icons-c/fleet/family-wt.png");
-    }
-  }
-  &_show {
-    &::before {
-      background-image: url("@img/icons-c/fleet/magic-show.png");
-    }
-  }
+  // &_romantic {
+  //   &::before {
+  //     background-image: url("@img/icons-c/fleet/romantic.png");
+  //   }
+  // }
 
-  &_entertainment-wt {
-    &::before {
-      background-image: url("@img/icons-c/fleet/entertainment-wt.png");
-    }
-  }
+  // &_designe {
+  //   &::before {
+  //     background-image: url("@img/icons-c/fleet/designe.png");
+  //   }
+  // }
+
+  // &_family-wt {
+  //   &::before {
+  //     background-image: url("@img/icons-c/fleet/family-wt.png");
+  //   }
+  // }
+
+  // &_show {
+  //   &::before {
+  //     background-image: url("@img/icons-c/fleet/magic-show.png");
+  //   }
+  // }
+
+  // &_entertainment-wt {
+  //   &::before {
+  //     background-image: url("@img/icons-c/fleet/entertainment-wt.png");
+  //   }
+  // }
 }
 
 
@@ -221,6 +231,11 @@
 //====================================================================================================
 
 .creation {
+  padding-top: vwm(25);
+
+  @media (min-width:$tablet) {
+    padding-top: vwpc(50);
+  }
 
   // .creation__container
   &__container {
@@ -260,10 +275,14 @@
   // .creation__block-row
 
   &__block-row {
-
-    display: grid;
-    gap: vwpc(35);
     position: relative;
+    @media (min-width:$tablet){
+      display: grid;
+      gap: vwpc(35);
+
+    }
+
+
 
     &::before {
       content: '';
@@ -304,20 +323,24 @@
       .creation__block-text {
         @media (min-width:$tablet) {
           padding: vwpc(100) 0 vwpc(110);
+
+          &_msc {
+            padding: vwpc(215) 0 vwpc(110);
+          }
         }
 
-        &_msc {
-          padding: vwpc(215) 0 vwpc(110);
-        }
+
       }
 
 
       .creation__block-img {
         width: 100%;
-        aspect-ratio: 480/279;
+        // aspect-ratio: 480/279;
+        height: vwm(279);
 
         @media (min-width:$tablet) {
-          aspect-ratio: 687/449;
+          // aspect-ratio: 687/449;
+          height: vwpc(449);
 
         }
       }
@@ -362,10 +385,12 @@
 
       .creation__block-img {
         width: 100%;
-        aspect-ratio: 480/399;
+        // aspect-ratio: 480/399;
+        height: vwm(399);
 
         @media (min-width:$tablet) {
-          aspect-ratio: 371/495;
+          // aspect-ratio: 371/495;
+          height: vwpc(495);
         }
       }
     }
@@ -470,10 +495,11 @@
       background-image: url("@img/icons-c/check.png");
       background-size: cover;
       flex: 0 0 vwm(33);
-      aspect-ratio: 1/1;
+      height: vwm(33);
 
       @media (min-width:$tablet) {
         flex: 0 0 vwpc(33);
+        height: vwpc(33);
 
       }
     }
@@ -505,7 +531,7 @@
     display: grid;
     gap: vwm(20);
 
-    @media (min-width:$tablet){
+    @media (min-width:$tablet) {
       gap: vwpc(70)
     }
   }
@@ -527,9 +553,9 @@
   &__card {
     margin-bottom: vwm(15);
 
-    @media (min-width:$tablet){
+    @media (min-width:$tablet) {
       margin-bottom: vwpc(45);
-        
+
     }
   }
 

@@ -1,32 +1,4 @@
 @font-face {
-	font-family: AlumniSans;
-	font-display: swap;
-	src: url("../fonts/AlumniSans-Bold.woff2") format("woff2"), url("../fonts/AlumniSans-Bold.woff") format("woff");
-	font-weight: 700;
-	font-style: normal;
-}
-@font-face {
-	font-family: AlumniSans;
-	font-display: swap;
-	src: url("../fonts/AlumniSans-Light.woff2") format("woff2"), url("../fonts/AlumniSans-Light.woff") format("woff");
-	font-weight: 300;
-	font-style: normal;
-}
-@font-face {
-	font-family: AlumniSans;
-	font-display: swap;
-	src: url("../fonts/AlumniSans-Medium.woff2") format("woff2"), url("../fonts/AlumniSans-Medium.woff") format("woff");
-	font-weight: 500;
-	font-style: normal;
-}
-@font-face {
-	font-family: AlumniSans;
-	font-display: swap;
-	src: url("../fonts/AlumniSans-Regular.woff2") format("woff2"), url("../fonts/AlumniSans-Regular.woff") format("woff");
-	font-weight: 400;
-	font-style: normal;
-}
-@font-face {
 	font-family: icons;
 	font-display: swap;
 	src: url("../fonts/icons.woff2") format("woff2"), url("../fonts/icons.woff") format("woff");
@@ -34,16 +6,51 @@
 	font-style: normal;
 }
 @font-face {
-	font-family: Impact;
+	font-family: OpenSans;
 	font-display: swap;
-	src: url("../fonts/Impact.woff2") format("woff2"), url("../fonts/Impact.woff") format("woff");
+	src: url("../fonts/OpenSans-SemiBold.woff2") format("woff2"), url("../fonts/OpenSans-SemiBold.woff") format("woff");
+	font-weight: 600;
+	font-style: normal;
+}
+@font-face {
+	font-family: OpenSans;
+	font-display: swap;
+	src: url("../fonts/OpenSans-Bold.woff2") format("woff2"), url("../fonts/OpenSans-Bold.woff") format("woff");
+	font-weight: 700;
+	font-style: normal;
+}
+@font-face {
+	font-family: OpenSans;
+	font-display: swap;
+	src: url("../fonts/OpenSans-Regular.woff2") format("woff2"), url("../fonts/OpenSans-Regular.woff") format("woff");
 	font-weight: 400;
 	font-style: normal;
 }
 @font-face {
-	font-family: AlumniSans;
+	font-family: RobotoFlex;
 	font-display: swap;
-	src: url("../fonts/AlumniSans-SemiBold.woff2") format("woff2"), url("../fonts/AlumniSans-SemiBold.woff") format("woff");
-	font-weight: 600;
+	src: url("../fonts/RobotoFlex-Regular.woff2") format("woff2"), url("../fonts/RobotoFlex-Regular.woff") format("woff");
+	font-weight: 400;
+	font-style: normal;
+}
+@font-face {
+	font-family: Philosopher;
+	font-display: swap;
+	src: url("../fonts/Philosopher-BoldItalic.woff2") format("woff2"), url("../fonts/Philosopher-BoldItalic.woff") format("woff");
+	font-weight: 700;
+	font-style: italic;
+}
+@font-face {
+	font-family: OpenSans;
+	font-display: swap;
+	src: url("../fonts/OpenSans-SemiBoldItalic.woff2") format("woff2"), url("../fonts/OpenSans-SemiBoldItalic.woff") format("woff");
+	font-weight: 700;
+	font-style: italic;
+}
+@font-face {
+	font-family: RobotoFlexGrad;
+	font-display: swap;
+	src: url("../fonts/RobotoFlex-VariableFont_GRAD,XOPQ,XTRA,YOPQ,YTAS,YTDE,YTFI,YTLC,YTUC,opsz,slnt,wdth,wght.woff2") format("woff2"), url("../fonts/RobotoFlex-VariableFont_GRAD,XOPQ,XTRA,YOPQ,YTAS,YTDE,YTFI,YTLC,YTUC,opsz,slnt,wdth,wght.woff") format("woff");
+	font-weight: 400;
 	font-style: normal;
 }

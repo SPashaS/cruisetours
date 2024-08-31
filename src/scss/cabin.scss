@@ -25,21 +25,32 @@
     }
   }
 
+  // .interior-cabin__main
+  &__main {
+    padding-bottom: vwm(55);
+
+    @media (min-width:$tablet) {
+      padding-bottom: vwpc(35);
+    }
+  }
+
   // .interior-cabin__title
   &__title {}
 
   // .interior-cabin__text
   &__text {
-    padding-bottom: vwm(20);
+    // padding-bottom: vwm(20);
 
     @media (min-width:$tablet) {
-      padding-bottom: vwpc(20);
+      // padding-bottom: vwpc(20);
       width: vwpc(620);
     }
   }
 
   // .interior-cabin__wrapper
   &__wrapper {
+    padding: 1.5em 0;
+
     @media (min-width:$tablet) {
       display: grid;
       align-items: start;
@@ -54,13 +65,13 @@
     padding-bottom: vwm(20);
     padding: 0;
     position: relative;
+    margin: 0 vwm(-18);
 
     @media (min-width:$tablet) {
 
       width: vwpc(545);
 
-      // padding: 0 vwpc(50);
-      margin-bottom: vwpc(20);
+      margin: 0;
     }
   }
 
@@ -69,11 +80,8 @@
   // .interior-cabin__slider
   &__slider {
     box-shadow: 0 4px 3px 0 rgba(0, 0, 0, 0.25);
-    margin: 0 vwm(-18);
 
-    @media (min-width:$tablet) {
-      margin: 0;
-    }
+    @media (min-width:$tablet) {}
   }
 
   // .interior-cabin__swiper
@@ -81,7 +89,13 @@
 
   // .interior-cabin__slide-ibg
   &__slide-ibg {
-    aspect-ratio: 480/349;
+    // aspect-ratio: 480/349;
+    height: vwm(349);
+
+    @media (min-width:$tablet) {
+      height: vwpc(338);
+
+    }
   }
 
   // .interior-cabin__options
@@ -148,6 +162,7 @@
           flex: 0 0 vwpc(65);
           height: vwpc(2);
           background: var(--accent-color);
+          border-radius: 0;
         }
       }
     }
@@ -160,13 +175,43 @@
 
 .tariff-ic {
 
-  // .tariff-ic__container
+  position: relative;
 
+  &::before {
+
+    @media (min-width:$tablet) {
+      content: '';
+      background-image: url("@img/cabin/decor-line-pc.svg");
+      background-size: cover;
+      width: vwpc(604);
+      height: vwpc(1223);
+      // aspect-ratio: 470/736;
+
+      position: absolute;
+      z-index: -1;
+      top: -50%;
+      right: 0;
+    }
+
+
+  }
+
+  // .tariff-ic__container
   &__container {
     @media (min-width:$tablet) {
       max-width: vwpc(990);
     }
   }
+
+
+  // .tariff-ic__header
+  &__header {
+
+    @media (min-width:$tablet) {
+      max-width: vwpc(595);
+    }
+  }
+
 
   // .tariff-ic___title
   &__title {
@@ -175,7 +220,7 @@
 
     @media (min-width:$tablet) {
       font-size: vwpc(30);
-      margin-bottom: vwpc(20);
+      // margin-bottom: vwpc(20);
     }
   }
 
@@ -190,7 +235,9 @@
   }
 
   // .tariff-ic__body
-  &__body {}
+  &__body {
+    position: relative;
+  }
 }
 
 .body-tariff-ic {
@@ -199,7 +246,7 @@
 
   border: 1px solid #000;
   border-radius: vwm(35);
-  padding: vwm(25) vwm(10) 0 vwm(35);
+  padding: vwm(25) vwm(10) vwm(60) vwm(35);
 
 
   @media (min-width:$tablet) {
@@ -232,7 +279,7 @@
   &__title {
     font-weight: 600;
     font-size: vwm(25);
-    margin-bottom: vwm(10);
+    // margin-bottom: vwm(10);
 
     @media (min-width:$tablet) {
       font-size: vwpc(30);
@@ -243,6 +290,16 @@
   &__list {
     li {
       margin-bottom: vwm(10);
+
+      span {
+        line-height: 1.21;
+        font-size: vwm(16);
+        color: #424242;
+
+        @media (min-width:$tablet) {
+          font-size: vwpc(16);
+        }
+      }
     }
   }
 
@@ -251,12 +308,15 @@
     background: var(--accent-color);
     justify-self: end;
     position: relative;
-    bottom: -1px;
 
     position: absolute;
-    right: 0;
-    bottom: 0;
-    transform: translateY(50%);
+    bottom: -1px;
+    right: vwm(10);
+
+    @media (min-width:$tablet) {
+      right: 0;
+      transform: translateY(50%);
+    }
   }
 }
 
@@ -297,12 +357,12 @@
   &__title {
     font-size: vwm(40);
     font-weight: 600;
-    margin-bottom: vwm(10);
+    // margin-bottom: vwm(10);
 
     @media (min-width:$tablet) {
 
       font-size: vwpc(50);
-      margin-bottom: vwpc(10);
+      // margin-bottom: vwpc(10);
     }
   }
 
@@ -316,8 +376,35 @@
     }
   }
 
-  // .suite__list
+  // .suite__header
+  &__header {
+    padding-bottom: vwm(20);
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: vwm(16);
+    row-gap: vwm(8);
 
+    .tag {
+      display: inline-block;
+      font-weight: 400;
+      line-height: 1.15;
+      color: rgba(0, 0, 0, 0.6);
+  
+      border: 1px solid rgba(0, 0, 0, 0.6);
+      padding: vwm(7);
+      border-radius: vwm(15);
+
+      &.active {
+        border-color: var(--accent-color);
+        color: var(--main-color-text);
+      }
+    }
+  }
+
+
+
+
+  // .suite__list
   &__list {
     display: grid;
     gap: vwm(35);
@@ -383,8 +470,15 @@
   // .item-suite__slide-ibg
 
   &__slide-ibg {
+    // aspect-ratio: 401/257;
     width: 100%;
-    aspect-ratio: 401/257;
+    height: vwm(349);
+
+    @media (min-width:$tablet) {
+      height: vwpc(257);
+
+    }
+
 
   }
 
@@ -506,7 +600,7 @@
 
       &.active {
         border-color: var(--accent-color);
-        
+
         .tariffs__nav-item-title {
           color: var(--main-color-text);
         }
@@ -515,6 +609,30 @@
 
     @media (min-width:$tablet) {
       padding: vwpc(40) vwpc(40) vwpc(20);
+
+      &:not(:last-child) {
+        .tariffs__nav-item-title {
+          margin-right: vwpc(-65);
+
+          &::after {
+            content: '';
+            background-image: url("@img/tariff/arrow.svg");
+            background-size: cover;
+            background-position: center right;
+            background-repeat: no-repeat;
+            height: vwpc(8);
+            flex: 1 1 calc(100%);
+          }
+
+          &::before {
+            content: '+';
+            position: absolute;
+            top: -35%;
+            left: 65%;
+            color: var(--accent-color);
+          }
+        }
+      }
     }
   }
 
@@ -525,6 +643,16 @@
 
     @media (min-width:$tablet) {
       font-size: vwpc(40);
+
+      @media (min-width:$tablet) {
+        color: var(--main-color-text);
+        position: relative;
+
+        display: flex;
+        align-items: center;
+        gap: vwpc(10);
+
+      }
     }
   }
 
@@ -622,6 +750,7 @@
       span {
         line-height: 1.21;
         font-size: vwm(16);
+        color: #424242;
 
         @media (min-width:$tablet) {
           font-size: vwpc(16);

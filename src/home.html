@@ -4,359 +4,437 @@
 "title":"CRUISETOURS.BY - Главная страница"
 })
 
-
 <body>
 	<div class="wrapper">
 		@@include('html/_header.htm',{})
 		<main class="page page_home">
+
 			<section class="page__promo promo">
-				<div class="promo__wrapper promo__wrapper-ibg">
-					<div class="promo__container">
-						<div class="promo__body">
-							<h1 class="promo__title">МОРСКИЕ КРУИЗЫ <span>2024-2025</span></h1>
-							<a href="#" class="promo__btn btn" data-popup="#application">ОСТАВИТЬ ЗАЯВКУ</a>
-							<a href="#" class="promo__btn btn" data-popup="#thanks">thanks</a>
-							<ul class="promo__socials socials">
-								<li><a href="#" class="socials__item _icon-instagram" aria-label="instagram"></a></li>
-								<li><a href="#" class="socials__item _icon-telegram" aria-label="telegram"></a></li>
-								<li><a href="#" class="socials__item _icon-youtube" aria-label="youtube"></a></li>
-							</ul>
-						</div>
+				<div class="promo__wrapper">
+					<div class="promo__header block-header">
+						<h1 class="h1">МОРСКИЕ КРУИЗЫ</h1>
+						<p>2024-2025</p>
 					</div>
+					<div class="promo__slider">
+						<div class="promo__swiper">
 
-					<picture>
-						<source media="(max-width: 992px)" srcset="@img/promo/home.jpg">
-						<source media="(min-width: 992px)" srcset="@img/promo/home-pc.jpg">
-						<img src="@img/1x1.png" alt="1">
-					</picture>
-				</div>
-
-				<div class="promo__text" data-da=".promo__body, 992, 1">
-					<p>
-						Мы единственное агентство <span>CRUISETOURS.BY</span>, которое специализируется только на круизных турах на
-						лайнерах. Поэтому мы предлагаем наши уникальные знания, личный опыт и полное сопровождение для хорошей
-						организации вашего увлекательного путешествия от начала и до конца.
-					</p>
-				</div>
-			</section>
-
-
-
-			<section class="page__promotion promotion">
-				<div class="promotion__container">
-					<h2 class="promotion__title">ЛУЧШИЕ ПРЕДЛОЖЕНИЯ И АКЦИИ</h2>
-					<div class="promotion__wrapper">
-						<div class="promotion__slider" data-show-more>
-							<div class="promotion__swiper" data-spollers data-show-more-content="4">
-
-								<div class="promotion__slide">
-
-									<div class="promotion-card">
-										<div class="promotion-card__image promotion-card__image-ibg">
-											<img src="@img/1x1.png" data-src="@img/promotion/1.jpg" alt="1">
-											<h3 class="promotion-card__title">Жемчужины Персидского залива</h3>
-										</div>
-										<div class="promotion-card__content">
-											<div class="promotion-card__subtitle">
-												<div class="promotion-card__subtitle-date"><span>АКЦИЯ</span> <span>до</span>
-													<span>12.12.2024</span></div>
-												<div class="promotion-card__subtitle-price">
-													<span class="promotion-card__subtitle-price_old">725€</span>
-													<span class="promotion-card__subtitle-price_new">от <b>399€</b></span>
-												</div>
-											</div>
-											<p class="promotion-card__text">
-												Бронируйте до 12 января включительно, количество кают ограничено
-											</p>
-										</div>
-										<div class="promotion-card__footer">
-											<a href="#" class="promotion-card__btn btn btn_br" data-popup="#application">ОСТАВИТЬ ЗАЯВКУ</a>
-											<a href="#" class="promotion-card__more _icon-arrow">Подробнее</a>
-										</div>
-									</div>
-
+							<div class="promo__slide promo__slide-ibg">
+								<div class="promo__slide-title">
+									Город приключений на воде
 								</div>
 
-								<div class="promotion__slide">
-
-									<div class="promotion-card">
-										<div class="promotion-card__image promotion-card__image-ibg">
-											<img src="@img/1x1.png" data-src="@img/promotion/1.jpg" alt="1">
-											<h3 class="promotion-card__title">Жемчужины Персидского залива</h3>
-										</div>
-										<div class="promotion-card__content">
-											<div class="promotion-card__subtitle">
-												<div class="promotion-card__subtitle-price">
-													от 399€
-												</div>
-											</div>
-											<p class="promotion-card__text">
-												Бронируйте до 12 января включительно, количество кают ограничено
-											</p>
-										</div>
-										<div class="promotion-card__footer">
-											<a href="#" class="promotion-card__btn btn btn_br" data-popup="#application">ОСТАВИТЬ ЗАЯВКУ</a>
-											<a href="#" class="promotion-card__more _icon-arrow">Подробнее</a>
-										</div>
-									</div>
-
-								</div>
-
-								<div class="promotion__slide">
-
-									<div class="promotion-card">
-										<div class="promotion-card__image promotion-card__image-ibg">
-											<img src="@img/1x1.png" data-src="@img/promotion/1.jpg" alt="1">
-											<h3 class="promotion-card__title">Жемчужины Персидского залива</h3>
-										</div>
-										<div class="promotion-card__content">
-											<div class="promotion-card__subtitle">
-												<div class="promotion-card__subtitle-date"><span>АКЦИЯ</span> <span>до</span>
-													<span>12.12.2024</span></div>
-												<div class="promotion-card__subtitle-price">
-													<span class="promotion-card__subtitle-price_old">725€</span>
-													<span class="promotion-card__subtitle-price_new">от 399€</span>
-												</div>
-											</div>
-											<p class="promotion-card__text">
-												Бронируйте до 12 января включительно, количество кают ограничено
-											</p>
-										</div>
-										<div class="promotion-card__footer">
-											<a href="#" class="promotion-card__btn btn btn_br" data-popup="#application">ОСТАВИТЬ ЗАЯВКУ</a>
-											<a href="#" class="promotion-card__more _icon-arrow">Подробнее</a>
-										</div>
-									</div>
-
-								</div>
-
-								<div class="promotion__slide">
-
-									<div class="promotion-card">
-										<div class="promotion-card__image promotion-card__image-ibg">
-											<img src="@img/1x1.png" data-src="@img/promotion/1.jpg" alt="1">
-											<h3 class="promotion-card__title">Жемчужины Персидского залива</h3>
-										</div>
-										<div class="promotion-card__content">
-											<div class="promotion-card__subtitle">
-												<div class="promotion-card__subtitle-date"><span>АКЦИЯ</span> <span>до</span>
-													<span>12.12.2024</span></div>
-												<div class="promotion-card__subtitle-price">
-													<span class="promotion-card__subtitle-price_old">725€</span>
-													<span class="promotion-card__subtitle-price_new">от 399€</span>
-												</div>
-											</div>
-											<p class="promotion-card__text">
-												Бронируйте до 12 января включительно, количество кают ограничено
-											</p>
-										</div>
-										<div class="promotion-card__footer">
-											<a href="#" class="promotion-card__btn btn btn_br" data-popup="#application">ОСТАВИТЬ ЗАЯВКУ</a>
-											<a href="#" class="promotion-card__more _icon-arrow">Подробнее</a>
-										</div>
-									</div>
-
-								</div>
-
-								<div class="promotion__slide">
-
-									<div class="promotion-card">
-										<div class="promotion-card__image promotion-card__image-ibg">
-											<img src="@img/1x1.png" data-src="@img/promotion/1.jpg" alt="1">
-											<h3 class="promotion-card__title">Жемчужины Персидского залива</h3>
-										</div>
-										<div class="promotion-card__content">
-											<div class="promotion-card__subtitle">
-												<div class="promotion-card__subtitle-date"><span>АКЦИЯ</span> <span>до</span>
-													<span>12.12.2024</span></div>
-												<div class="promotion-card__subtitle-price">
-													<span class="promotion-card__subtitle-price_old">725€</span>
-													<span class="promotion-card__subtitle-price_new">от 399€</span>
-												</div>
-											</div>
-											<p class="promotion-card__text">
-												Бронируйте до 12 января включительно, количество кают ограничено
-											</p>
-										</div>
-										<div class="promotion-card__footer">
-											<a href="#" class="promotion-card__btn btn btn_br" data-popup="#application">ОСТАВИТЬ ЗАЯВКУ</a>
-											<a href="#" class="promotion-card__more _icon-arrow">Подробнее</a>
-										</div>
-									</div>
-
-								</div>
-<!-- 
-								<div class="promotion__slide">
-
-									<div class="promotion-card">
-										<div class="promotion-card__image promotion-card__image-ibg">
-											<img src="@img/1x1.png" data-src="@img/promotion/1.jpg" alt="1">
-											<h3 class="promotion-card__title">Жемчужины Персидского залива</h3>
-										</div>
-										<div class="promotion-card__content">
-											<div class="promotion-card__subtitle">
-												<div class="promotion-card__subtitle-date"><span>АКЦИЯ</span> <span>до</span>
-													<span>12.12.2024</span></div>
-												<div class="promotion-card__subtitle-price">
-													<span class="promotion-card__subtitle-price_old">725€</span>
-													<span class="promotion-card__subtitle-price_new">от 399€</span>
-												</div>
-											</div>
-											<p class="promotion-card__text">
-												Бронируйте до 12 января включительно, количество кают ограничено
-											</p>
-										</div>
-										<div class="promotion-card__footer">
-											<a href="#" class="promotion-card__btn btn btn_br" data-popup="#application">ОСТАВИТЬ ЗАЯВКУ</a>
-											<a href="#" class="promotion-card__more _icon-arrow">Подробнее</a>
-										</div>
-									</div>
-
-								</div> -->
-
+								<picture>
+									<source media="(max-width: 992px)" srcset="@img/promo/1.jpg">
+									<source media="(min-width: 992px)" srcset="@img/promo/1-pc.jpg">
+									<img src="@img/1x1.png" alt="1">
+								</picture>
 							</div>
-							<!-- <div class="promotion__slider-nav slider-nav">
-								<div class="slider-nav__btn_prev"></div>
-								<div class="slider-nav__btn_next"></div>
-							</div> -->
 
-							<!-- <button hidden  data-show-more-btn type="button" class="promotion__btn-more btn-more _icon-arrow">
-								<span>Показать еще</span><span>Скрыть</span>
-							</button> -->
+							<div class="promo__slide promo__slide-ibg">
+								<div class="promo__slide-title">
+									Удивительная Антарктида
+								</div>
+
+								<picture>
+									<source media="(max-width: 992px)" srcset="@img/promo/2.jpg">
+									<source media="(min-width: 992px)" srcset="@img/promo/2-pc.jpg">
+									<img src="@img/1x1.png" alt="1">
+								</picture>
+							</div>
 
 
 						</div>
-
+						<div class="promo__slider-nav slider-nav-n slider-nav-n_circle">
+							<button class="slider-nav-n__btn slider-nav-n__btn_prev _icon-arrow" aria-label="Следующий слайд"></button>
+							<button class="slider-nav-n__btn slider-nav-n__btn_next _icon-arrow" aria-label="Предыдущий слайд"></button>
+						</div>
+					</div>
+				</div>
+				<div class="promo__container_n">
+					<div class="promo__body">
+						<p class="promo__text">
+							CRUISETOURS.BY — единственное агентство в Беларуси, которое занимается только организацией туров на
+							круизных лайнерах. Сопровождаем от первой консультации до возвращения из круиза. Путешествуем сами,
+							поэтому делимся опытом и секретами путешествия, о которых не рассказывают другие.
+						</p>
+						<a href="#" class="promo__btn btn" data-popup="#application">Оставить заявку</a>
+						<a href="#" class="promo__btn btn" data-popup="#thanks">Спасибо!</a>
 					</div>
 				</div>
 			</section>
 
-			<section class="page__why-we why-we" data-da=".page, 992,1">
-				<div class="why-we__container">
+			<section class="page__best-cruises best-cruises">
+				<div class="best-cruises__container_n">
+					<div class="best-cruises__header block-header">
+						<h2>Лучшие круизы</h2>
+						<p>для вас</p>
+					</div>
+					<div class="best-cruises__body">
+						<div class="best-cruises__body-item-ibg">
+							<div class="best-cruises__body-title">Без визы</div>
+							<img src="@img/1x1.png" data-src="@img/new/best/1.jpg" alt="1">
+						</div>
+						<div class="best-cruises__body-item-ibg">
+							<div class="best-cruises__body-title">Семьям</div>
+							<img src="@img/1x1.png" data-src="@img/new/best/2.jpg" alt="1">
+						</div>
+						<div class="best-cruises__body-item-ibg">
+							<div class="best-cruises__body-title">Премиум</div>
+							<img src="@img/1x1.png" data-src="@img/new/best/3.jpg" alt="1">
+						</div>
+						<div class="best-cruises__body-item-ibg">
+							<div class="best-cruises__body-title">Прямой перелет</div>
+							<img src="@img/1x1.png" data-src="@img/new/best/4.jpg" alt="1">
+						</div>
+						<div class="best-cruises__body-item-ibg">
+							<div class="best-cruises__body-title">До 1500 евро</div>
+							<img src="@img/1x1.png" data-src="@img/new/best/5.jpg" alt="1">
+						</div>
+						<div class="best-cruises__body-item-ibg">
+							<div class="best-cruises__body-title">Молодоженам</div>
+							<img src="@img/1x1.png" data-src="@img/new/best/6.jpg" alt="1">
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="page__water-areas water-areas">
+				<div class="water-areas__container_n">
+					<div class="water-areas__header block-header">
+						<h2>Акватории мира</h2>
+						<p>Исследуйте удивительные места</p>
+					</div>
+					<div class="water-areas__body">
+						<div class="water-areas__map">
+							<div class="water-areas__labels water-areas__labels_mainlands">
+								<span class="mainland"><span>Северная Америка</span></span>
+								<span class="mainland"><span>Южная Америка</span></span>
+								<span class="mainland"><span>Европа</span></span>
+								<span class="mainland"><span>Африка</span></span>
+								<span class="mainland"><span>Азия</span></span>
+								<span class="mainland"><span>Австралия</span></span>
+							</div>
+
+							<div class="water-areas__labels water-areas__labels_oceans">
+								<span class="ocean"><span>Северный Ледовитый океан</span></span>
+								<span class="ocean"><span>Северный Тихий океан</span></span>
+								<span class="ocean"><span>Южная часть Тихого океана</span></span>
+								<span class="ocean"><span>Южный океан</span></span>
+								<span class="ocean"><span>Северная часть Атлантического океана</span></span>
+								<span class="ocean"><span>Южная часть Атлантического океана</span></span>
+								<span class="ocean"><span>Индийский океан</span></span>
+							</div>
+							<span class="water-areas__icon water-areas__icon_1"></span>
+							<span class="water-areas__icon water-areas__icon_2"></span>
+							<div class="water-areas__cards">
+								<div class="water-areas__card card-water-areas" style="top: 5%;left: 10%;">
+									<div class="card-water-areas__img-ibg">
+										<img src="@img/1x1.png" data-src="@img/new/water-areas/1.jpg" alt="">
+									</div>
+									<div class="card-water-areas__header">
+										<p>
+											Море Баффина
+										</p>
+									</div>
+								</div>
+								<div class="water-areas__card card-water-areas" style="top: 15%;left: 20%;">
+									<div class="card-water-areas__img-ibg">
+										<img src="@img/1x1.png" data-src="@img/new/water-areas/2.jpg" alt="">
+									</div>
+									<div class="card-water-areas__header">
+										<p>
+											Море Баффина
+										</p>
+									</div>
+								</div>
+								<div class="water-areas__card card-water-areas" style="top: 45%;left: 88%;">
+									<div class="card-water-areas__img-ibg">
+										<img src="@img/1x1.png" data-src="@img/new/water-areas/3.jpg" alt="">
+									</div>
+									<div class="card-water-areas__header">
+										<p>
+											Море Баффина
+										</p>
+									</div>
+								</div>
+								<div class="water-areas__card card-water-areas" style="top: 88%;left: 65%;">
+									<div class="card-water-areas__img-ibg">
+										<img src="@img/1x1.png" data-src="@img/new/water-areas/1.jpg" alt="">
+									</div>
+									<div class="card-water-areas__header">
+										<p>
+											Море Баффина
+										</p>
+									</div>
+								</div>
+								<div class="water-areas__card card-water-areas" style="top: 55%;left: 10%;">
+									<div class="card-water-areas__img-ibg">
+										<img src="@img/1x1.png" data-src="@img/new/water-areas/2.jpg" alt="">
+									</div>
+									<div class="card-water-areas__header">
+										<p>
+											Море Баффина
+										</p>
+									</div>
+								</div>
+								<div class="water-areas__card card-water-areas" style="top: 65%;left: 20%;">
+									<div class="card-water-areas__img-ibg">
+										<img src="@img/1x1.png" data-src="@img/new/water-areas/3.jpg" alt="">
+									</div>
+									<div class="card-water-areas__header">
+										<p>
+											Море Баффина
+										</p>
+									</div>
+								</div>
+								<div class="water-areas__card card-water-areas" style="top: 75%;left: 30%;">
+									<div class="card-water-areas__img-ibg">
+										<img src="@img/1x1.png" data-src="@img/new/water-areas/1.jpg" alt="">
+									</div>
+									<div class="card-water-areas__header">
+										<p>
+											Море Баффина
+										</p>
+									</div>
+								</div>
+								<div class="water-areas__card card-water-areas" style="top: 85%;left: 40%;">
+									<div class="card-water-areas__img-ibg">
+										<img src="@img/1x1.png" data-src="@img/new/water-areas/3.jpg" alt="">
+									</div>
+									<div class="card-water-areas__header">
+										<p>
+											Море Баффина
+										</p>
+									</div>
+								</div>
+							</div>
+
+						</div>
+
+						<div class="water-areas__sliders">
+
+							<div class="water-areas__sliders-item">
+								<h3 class="water-areas__item-title">Северная Америка</h3>
+								<div class="water-areas__slider">
+									<div class="water-areas__swiper">
+
+										<div class="water-areas__slide slide-water-areas">
+											<div class="slide-water-areas__img-ibg">
+												<img src="@img/1x1.png" data-src="@img/new/water-areas/1.jpg" alt="">
+											</div>
+											<div class="slide-water-areas__header">
+												<p>
+													Море Баффина
+												</p>
+											</div>
+										</div>
+
+										<div class="water-areas__slide slide-water-areas">
+											<div class="slide-water-areas__img-ibg">
+												<img src="@img/1x1.png" data-src="@img/new/water-areas/2.jpg" alt="">
+											</div>
+											<div class="slide-water-areas__header">
+												<p>
+													Норвежское море
+												</p>
+											</div>
+										</div>
+
+										<div class="water-areas__slide slide-water-areas">
+											<div class="slide-water-areas__img-ibg">
+												<img src="@img/1x1.png" data-src="@img/new/water-areas/3.jpg" alt="">
+											</div>
+											<div class="slide-water-areas__header">
+												<p>
+													Мексиканский залив
+												</p>
+											</div>
+										</div>
+
+										<div class="water-areas__slide slide-water-areas">
+											<div class="slide-water-areas__img-ibg">
+												<img src="@img/1x1.png" data-src="@img/new/water-areas/1.jpg" alt="">
+											</div>
+											<div class="slide-water-areas__header">
+												<p>
+													Карибское море
+												</p>
+											</div>
+										</div>
+
+									</div>
+									<div class="slider-nav-n slider-nav-n_height">
+										<button class="slider-nav-n__btn slider-nav-n__btn_prev _icon-arrow" aria-label="Следующий слайд"></button>
+										<button class="slider-nav-n__btn slider-nav-n__btn_next _icon-arrow" aria-label="Предыдущий слайд"></button>
+									</div>
+								</div>
+							</div>
+							<div class="water-areas__sliders-item">
+								<h3 class="water-areas__item-title">Южная Америка</h3>
+								<div class="water-areas__slider">
+									<div class="water-areas__swiper">
+
+										<div class="water-areas__slide slide-water-areas">
+											<div class="slide-water-areas__img-ibg">
+												<img src="@img/1x1.png" data-src="@img/new/water-areas/1.jpg" alt="">
+											</div>
+											<div class="slide-water-areas__header">
+												<p>
+													Море Баффина
+												</p>
+											</div>
+										</div>
+
+										<div class="water-areas__slide slide-water-areas">
+											<div class="slide-water-areas__img-ibg">
+												<img src="@img/1x1.png" data-src="@img/new/water-areas/2.jpg" alt="">
+											</div>
+											<div class="slide-water-areas__header">
+												<p>
+													Норвежское море
+												</p>
+											</div>
+										</div>
+
+										<div class="water-areas__slide slide-water-areas">
+											<div class="slide-water-areas__img-ibg">
+												<img src="@img/1x1.png" data-src="@img/new/water-areas/3.jpg" alt="">
+											</div>
+											<div class="slide-water-areas__header">
+												<p>
+													Мексиканский залив
+												</p>
+											</div>
+										</div>
+
+										<div class="water-areas__slide slide-water-areas">
+											<div class="slide-water-areas__img-ibg">
+												<img src="@img/1x1.png" data-src="@img/new/water-areas/1.jpg" alt="">
+											</div>
+											<div class="slide-water-areas__header">
+												<p>
+													Карибское море
+												</p>
+											</div>
+										</div>
+
+									</div>
+									<div class="slider-nav-n slider-nav-n_height">
+										<button class="slider-nav-n__btn slider-nav-n__btn_prev _icon-arrow" aria-label="Следующий слайд"></button>
+										<button class="slider-nav-n__btn slider-nav-n__btn_next _icon-arrow" aria-label="Предыдущий слайд"></button>
+									</div>
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="page__reservation reservation">
+				<div class="reservation__container_n">
+					<div class="reservation__header block-header">
+						<h2>Этапы бронирования</h2>
+						<p>Пару шагов и вы в круизе!</p>
+					</div>
+					<ul class="reservation__list">
+						<li class="reservation__item">
+							<span class="reservation__item-icon"><img src="@img/1x1.png" data-src="@img/new/reservation/1.png"
+									alt=""></span>
+							<p>Свяжитесь с нами или выберите круиз самостоятельно</p>
+						</li>
+						<li class="reservation__item">
+							<span class="reservation__item-icon"><img src="@img/1x1.png" data-src="@img/new/reservation/1.png"
+									alt=""></span>
+							<p>Свяжитесь с нами или выберите круиз самостоятельно</p>
+						</li>
+						<li class="reservation__item">
+							<span class="reservation__item-icon"><img src="@img/1x1.png" data-src="@img/new/reservation/1.png"
+									alt=""></span>
+							<p>Свяжитесь с нами или выберите круиз самостоятельно</p>
+						</li>
+						<li class="reservation__item">
+							<span class="reservation__item-icon"><img src="@img/1x1.png" data-src="@img/new/reservation/1.png"
+									alt=""></span>
+							<p>Свяжитесь с нами или выберите круиз самостоятельно</p>
+						</li>
+						<li class="reservation__item">
+							<span class="reservation__item-icon"><img src="@img/1x1.png" data-src="@img/new/reservation/1.png"
+									alt=""></span>
+							<p>Свяжитесь с нами или выберите круиз самостоятельно</p>
+						</li>
+
+						<li class="reservation__item">
+							<span class="reservation__item-icon"><img src="@img/1x1.png" data-src="@img/new/reservation/last.png"
+									alt=""></span>
+							<p>Свяжитесь с нами или выберите круиз самостоятельно</p>
+						</li>
+
+					</ul>
+					<div class="reservation__btn-row btn-row">
+						<a href="#" class="btn" data-popup="#application">Оставить заявку</a>
+					</div>
+				</div>
+			</section>
+
+			<section class="page__why-we why-we">
+				<div class="why-we__container_n">
+					<div class="why-we__header block-header">
+						<h2>ПОЧЕМУ МЫ?</h2>
+						<p>CRUISETOURS. BY</p>
+					</div>
 					<div class="why-we__body">
-						<div class="why-we__row why-we__row_top">
-							<div class="why-we__row-ceil"></div>
-							<div class="why-we__row-ceil" data-da=".why-we__row_t-header, 992, 0">
-								<h2 class="why-we__title">CRUISETOURS. BY</h2>
-								<span class="why-we__subtitle">Почему мы?</span>
-							</div>
-						</div>
-						<div class="why-we__table">
-							<div class="why-we__row why-we__row_t-header">
-								<div class="why-we__row-ceil why-we__row-ceil_2">
-									<span data-da=".why-we__row_top .why-we__row-ceil, 992, 1">ВСЕ ВАШИ ЗАБОТЫ БЕРЕМ НА СЕБЯ</span>
-									<p>
-										Оказываем поддержку на каждом этапе : от выбора круиза до трансфера.
-										Остаемся на связи во время путешествия
-									</p>
-								</div>
-							</div>
-							<div class="why-we__row why-we__row_t-body">
-								<div class="why-we__row-ceil">
-									<span data-da=".why-we__row_t-header .why-we__row-ceil_2, 992, 1">ПОДБЕРЕМ ЛУЧШИЙ ВАРИАНТ РАЗМЕЩЕНИЯ ИМЕННО ДЛЯ ВАС</span>
-									<p>Учтем бюджет, количество туристов,
-										пожелания по расположению и виду из
-										каюты</p>
-					
-								</div>
-							</div>
-							<div class="why-we__row why-we__row_t-footer">
-								<div class="why-we__row-ceil">
-									<span data-da=".why-we__row_t-body .why-we__row-ceil, 992, 1">ЧЕСТНОСТЬ</span>
-									<p>
-										Если мы поймём, что круиз не ваш вариант,
-										мы предупредим обо всех минусах
-									</p>
-								</div>
-							</div>
-							
-						</div>
-					</div>
-				</div>
-			</section>
 
-			<section class="page__reservation reservation" data-da=".page, 992,2">
-				<div class="reservation__container">
-					<h2 class="reservation__title">ЭТАПЫ БРОНИРОВАНИЯ</h2>
-					<ol class="reservation__list">
-						<li>Оставьте заявку или свяжитесь с нами</li>
-						<li>Получите лучшие варианты круизов</li>
-						<li>Выберите подходящий тур</li>
-						<li>Заключите договор</li>
-						<li>Ставим круиз и выбранную каюту на предбронирование</li>
-						<li>Внесите оплату</li>
-						<li>Дождитесь подтверждения бронирования от круизной компании</li>
-						<li>Получите все необходимые документы для Вашей поездки</li>
-						<li>ПОЗДРАВЛЯЕМ, ВЫ В КРУИЗЕ!</li>
-					</ol>
-				</div>
-			</section>
-
-			<div class="page__application-block application-block">
-				<div class="application-block__container">
-					<div class="application">
-						<div class="application__header">
-							<div class="application__title">ОСТАВИТЬ ЗАЯВКУ</div>
-							<p class="application__text">
-								Оставьте свои данные, мы свяжемся с вами и предложим лучший вариант
+						<div class="why-we__item item-why-we">
+							<div class="item-why-we__icon">
+								<img src="@img/1x1.png" data-src="@img/new/why-we/1.png" alt="">
+							</div>
+							<div class="item-why-we__title">Экспертиза</div>
+							<p class="item-why-we__text">
+								Предлагаем туры прямо от собственников лайнеров по выгодным ценам. А команда агентства разбирается в
+								нюансах круизных линий, типах кают и других деталях морских путешествий.
 							</p>
 						</div>
-						<div class="application__body">
-							<div class="application__form form">
-								<form class="form" action="#">
-									<div class="form__row">
-										<div class="form__input">
-											<input type="text" data-error="Ошибка" placeholder="Ваше имя">
-										</div>
-									</div>
-									<div class="form__row">
-										<div class="form__input">
-											<input type="text" data-error="Ошибка" placeholder="Телефон">
-										</div>
-									</div>
-									<div class="form__row">
-										<div class="form__textarea">
-											<textarea type="text" placeholder="Пожелания по туру"></textarea>
-										</div>
-									</div>
-									<div class="form__row">
-										<div class="form__select">
-
-											<div class="form__select-item">
-												<input id="type-contacts-call-me" type="radio" name="type-contacts" value="CallMe" checked>
-												<label for="type-contacts-call-me">Позвонить мне</label>
-											</div>
-
-											<div class="form__select-item">
-												<input id="type-contacts-whatsapp" type="radio" name="type-contacts" value="WhatsApp">
-												<label for="type-contacts-whatsapp">Написать мне в WhatsApp</label>
-											</div>
-
-											<div class="form__select-item">
-												<input id="type-contacts-telegram" type="radio" name="type-contacts" value="Telegram">
-												<label for="type-contacts-telegram">Написать мне в Telegram</label>
-											</div>
-
-										</div>
-									</div>
-									<div class="form__submit">
-										<button class="btn" type="submit">Отправить</button>
-									</div>
-								</form>
+						<div class="why-we__item item-why-we">
+							<div class="item-why-we__icon">
+								<img src="@img/1x1.png" data-src="@img/new/why-we/2.png" alt="">
 							</div>
+							<div class="item-why-we__title">Экспертиза</div>
+							<p class="item-why-we__text">
+								Предлагаем туры прямо от собственников лайнеров по выгодным ценам. А команда агентства разбирается в
+								нюансах круизных линий, типах кают и других деталях морских путешествий.
+							</p>
 						</div>
+						<div class="why-we__item item-why-we">
+							<div class="item-why-we__icon">
+								<img src="@img/1x1.png" data-src="@img/new/why-we/3.png" alt="">
+							</div>
+							<div class="item-why-we__title">Экспертиза</div>
+							<p class="item-why-we__text">
+								Предлагаем туры прямо от собственников лайнеров по выгодным ценам. А команда агентства разбирается в
+								нюансах круизных линий, типах кают и других деталях морских путешествий.
+							</p>
+						</div>
+
 					</div>
+					<div class="why-we__btn-row btn-row">
+						<a href="#" class="btn" data-popup="#application">Оставить заявку</a>
+					</div>
+
+
 				</div>
-			</div>
+			</section>
 
 			<section class="page__questions questions">
-				<div class="questions__container">
-					<h2 class="questions__title">ЧАСТО ЗАДАВАЕМЫЕ ВОПРОСЫ </h2>
+				<div class="questions__container_n">
+					<div class="questions__header block-header">
+						<h2 class="questions__title">Часто задаваемые вопросы</h2>
+					</div>
 
 					<div class="questions__wrapper" data-show-more>
 
 						<div class="questions__body" data-spollers data-show-more-content="5">
-	
+
 							<div class="questions__item item-questions">
 								<button type="button" data-spoller class="item-questions__title _icon-arrow">Почему круиз?</button>
 								<div class="item-questions__body">
@@ -373,7 +451,7 @@
 									</p>
 								</div>
 							</div>
-	
+
 							<div class="questions__item item-questions">
 								<button type="button" data-spoller class="item-questions__title _icon-arrow">
 									Круизы - это слишком дорого?<br>Сколько вообще стоит круиз на лайнере
@@ -392,7 +470,7 @@
 									</p>
 								</div>
 							</div>
-	
+
 							<div class="questions__item item-questions">
 								<button type="button" data-spoller class="item-questions__title _icon-arrow">Какой круиз мне
 									выбрать?</button>
@@ -410,9 +488,10 @@
 									</p>
 								</div>
 							</div>
-	
+
 							<div class="questions__item item-questions">
-								<button type="button" data-spoller class="item-questions__title _icon-arrow">Что уже включено в стоимость
+								<button type="button" data-spoller class="item-questions__title _icon-arrow">Что уже включено в
+									стоимость
 									круиза?</button>
 								<div class="item-questions__body">
 									<p>
@@ -428,7 +507,7 @@
 									</p>
 								</div>
 							</div>
-	
+
 							<div class="questions__item item-questions">
 								<button type="button" data-spoller class="item-questions__title _icon-arrow">Дети едут в круиз
 									бесплатно?</button>
@@ -463,7 +542,7 @@
 									</p>
 								</div>
 							</div>
-	
+
 							<div class="questions__item item-questions">
 								<button type="button" data-spoller class="item-questions__title _icon-arrow">
 									Круизы - это слишком дорого?<br>Сколько вообще стоит круиз на лайнере
@@ -482,7 +561,7 @@
 									</p>
 								</div>
 							</div>
-	
+
 							<div class="questions__item item-questions">
 								<button type="button" data-spoller class="item-questions__title _icon-arrow">Какой круиз мне
 									выбрать?</button>
@@ -503,10 +582,6 @@
 
 						</div>
 
-						<button data-show-more-btn type="button" class="questions__btn-more btn-more _icon-arrow">
-							<span>Показать еще</span><span>Скрыть</span>
-						</button>
-
 					</div>
 
 
@@ -516,9 +591,170 @@
 				</div>
 			</section>
 
+			<section class="page__promotion promotion">
+				<div class="promotion__container_n">
+					<div class="promotion__header block-header">
+						<h2>Специальные предложения</h2>
+						<p>Лучшее время - прямо сейчас</p>
+					</div>
+					<div class="promotion__wrapper">
+						<div class="promotion__slider" data-show-more>
+							<div class="promotion__swiper" data-spollers data-show-more-content="4">
+
+								<div class="promotion__slide">
+
+									<div class="promotion-card">
+										<div class="promotion-card__img promotion-card__img-ibg">
+											<img src="@img/1x1.png" data-src="@img/promotion/1.jpg" alt="1">
+											<h3 class="promotion-card__title">Жемчужины Персидского залива</h3>
+										</div>
+										<div class="promotion-card__content">
+											<div class="promotion-card__subtitle">
+												<div class="promotion-card__subtitle-date"><span>АКЦИЯ</span> <span>до</span>
+													<span>12.12.2024</span>
+												</div>
+												<div class="promotion-card__subtitle-price">
+													<span class="promotion-card__subtitle-price_old">725€</span>
+													<span class="promotion-card__subtitle-price_new">от <b>399€</b></span>
+												</div>
+											</div>
+											<p class="promotion-card__text">
+												Бронируйте до 12 января включительно, количество кают ограничено
+											</p>
+											<a href="#" class="promotion-card__btn btn btn_br" data-popup="#application">Оставить заявку</a>
+										</div>
+									</div>
+
+								</div>
+
+								<div class="promotion__slide">
+
+									<div class="promotion-card">
+										<div class="promotion-card__img promotion-card__img-ibg">
+											<img src="@img/1x1.png" data-src="@img/promotion/1.jpg" alt="1">
+											<h3 class="promotion-card__title">Жемчужины Персидского залива</h3>
+										</div>
+										<div class="promotion-card__content">
+											<div class="promotion-card__subtitle">
+												<div class="promotion-card__subtitle-price">
+													от 399€
+												</div>
+											</div>
+											<p class="promotion-card__text">
+												Бронируйте до 12 января включительно, количество кают ограничено
+											</p>
+											<a href="#" class="promotion-card__btn btn btn_br" data-popup="#application">Оставить заявку</a>
+										</div>
+									</div>
+
+								</div>
+
+								<div class="promotion__slide">
+
+									<div class="promotion-card">
+										<div class="promotion-card__img promotion-card__img-ibg">
+											<img src="@img/1x1.png" data-src="@img/promotion/1.jpg" alt="1">
+											<h3 class="promotion-card__title">Жемчужины Персидского залива</h3>
+										</div>
+										<div class="promotion-card__content">
+											<div class="promotion-card__subtitle">
+												<div class="promotion-card__subtitle-date"><span>АКЦИЯ</span> <span>до</span>
+													<span>12.12.2024</span>
+												</div>
+												<div class="promotion-card__subtitle-price">
+													<span class="promotion-card__subtitle-price_old">725€</span>
+													<span class="promotion-card__subtitle-price_new">от 399€</span>
+												</div>
+											</div>
+											<p class="promotion-card__text">
+												Бронируйте до 12 января включительно, количество кают ограничено
+											</p>
+											<a href="#" class="promotion-card__btn btn btn_br" data-popup="#application">Оставить заявку</a>
+										</div>
+									</div>
+
+								</div>
+
+								<div class="promotion__slide">
+
+									<div class="promotion-card">
+										<div class="promotion-card__img promotion-card__img-ibg">
+											<img src="@img/1x1.png" data-src="@img/promotion/1.jpg" alt="1">
+											<h3 class="promotion-card__title">Жемчужины Персидского залива</h3>
+										</div>
+										<div class="promotion-card__content">
+											<div class="promotion-card__subtitle">
+												<div class="promotion-card__subtitle-date"><span>АКЦИЯ</span> <span>до</span>
+													<span>12.12.2024</span>
+												</div>
+												<div class="promotion-card__subtitle-price">
+													<span class="promotion-card__subtitle-price_old">725€</span>
+													<span class="promotion-card__subtitle-price_new">от 399€</span>
+												</div>
+											</div>
+											<p class="promotion-card__text">
+												Бронируйте до 12 января включительно, количество кают ограничено
+											</p>
+											<a href="#" class="promotion-card__btn btn btn_br" data-popup="#application">Оставить заявку</a>
+										</div>
+									</div>
+
+								</div>
+
+								<div class="promotion__slide">
+
+									<div class="promotion-card">
+										<div class="promotion-card__img promotion-card__img-ibg">
+											<img src="@img/1x1.png" data-src="@img/promotion/1.jpg" alt="1">
+											<h3 class="promotion-card__title">Жемчужины Персидского залива</h3>
+										</div>
+										<div class="promotion-card__content">
+											<div class="promotion-card__subtitle">
+												<div class="promotion-card__subtitle-date"><span>АКЦИЯ</span> <span>до</span>
+													<span>12.12.2024</span>
+												</div>
+												<div class="promotion-card__subtitle-price">
+													<span class="promotion-card__subtitle-price_old">725€</span>
+													<span class="promotion-card__subtitle-price_new">от 399€</span>
+												</div>
+											</div>
+											<p class="promotion-card__text">
+												Бронируйте до 12 января включительно, количество кают ограничено
+											</p>
+											<a href="#" class="promotion-card__btn btn btn_br" data-popup="#application">Оставить заявку</a>
+										</div>
+									</div>
+
+								</div>
+
+							</div>
+
+							<div class="slider-nav-n slider-nav-n_height">
+								<button class="slider-nav-n__btn slider-nav-n__btn_prev _icon-arrow" aria-label="Следующий слайд"></button>
+								<button class="slider-nav-n__btn slider-nav-n__btn_next _icon-arrow" aria-label="Предыдущий слайд"></button>
+							</div>
+							<!-- <div class="promotion__slider-nav slider-nav">
+								<div class="slider-nav__btn_prev"></div>
+								<div class="slider-nav__btn_next"></div>
+							</div> -->
+
+							<!-- <button hidden  data-show-more-btn type="button" class="promotion__btn-more btn-more _icon-arrow">
+								<span>Показать еще</span><span>Скрыть</span>
+							</button> -->
+
+
+						</div>
+
+					</div>
+				</div>
+			</section>
+
 			<section class="page__news news">
-				<div class="news__container">
-					<h2 class="news__title">НОВОСТИ</h2>
+				<div class="news__container_n">
+					<div class="news__header block-header">
+						<h2>НОВОСТИ</h2>
+						<p>Крузного мира</p>
+					</div>
 
 
 					<div class="news__wrapper" data-show-more>
@@ -527,7 +763,9 @@
 							<article class="news__item item-news">
 								<div class="item-news__row">
 									<div class="item-news__body">
-										<a href="#" class="item-news__title">Изменения в маршрутах MSC Cruises в зимнем сезоне 2023/2024</a>
+										<a href="#" class="item-news__title">
+											<h3>Изменения в маршрутах MSC Cruises в зимнем сезоне 2023/2024</h3>
+										</a>
 										<p class="item-news__text">
 											В свете текущей геополитической ситуации и для обеспечения безопасности своих пассажиров и экипажа
 											компания MSC Cruises была вынуждена отменить зимнюю программу в Красном море на лайнере MSC
@@ -541,128 +779,130 @@
 							<article class="news__item item-news">
 								<div class="item-news__row">
 									<div class="item-news__body">
-										<a href="#" class="item-news__title">Изменение оплаты сервисного сбора</a>
+										<a href="#" class="item-news__title">
+											<h3>Изменения в маршрутах MSC Cruises в зимнем сезоне 2023/2024</h3>
+										</a>
 										<p class="item-news__text">
-											С 13 июля 2023 года компания MSC Cruises вводит обязательную оплату сервисного сбора при
-											бронировании круиза. Оплата на борту теперь невозможна. Сервисный
-											сбор взимается с каждого пассажира за исключением детей в возрасте ...
+											В свете текущей геополитической ситуации и для обеспечения безопасности своих пассажиров и экипажа
+											компания MSC Cruises была вынуждена отменить зимнюю программу в Красном море на лайнере MSC
+											Orchestra, которая была ...
 										</p>
 									</div>
-									<span class="item-news__date">06.07.2023</span>
+									<span class="item-news__date">23.10.2023</span>
 								</div>
 							</article>
-
 							<article class="news__item item-news">
 								<div class="item-news__row">
 									<div class="item-news__body">
-										<a href="#" class="item-news__title">Новое: Upselling option на напитки</a>
+										<a href="#" class="item-news__title">
+											<h3>Изменения в маршрутах MSC Cruises в зимнем сезоне 2023/2024</h3>
+										</a>
 										<p class="item-news__text">
-											Начиная с летнего сезона 2023 MSC Cruises на борту лайнеров предлагают пассажирам следующую
-											Upselling option. Пассажиры, которые уже приобрели один из пакетов напитков, смогут на борту
-											лайнера применить Upselling option. Это означает, что ...
+											В свете текущей геополитической ситуации и для обеспечения безопасности своих пассажиров и экипажа
+											компания MSC Cruises была вынуждена отменить зимнюю программу в Красном море на лайнере MSC
+											Orchestra, которая была ...
 										</p>
 									</div>
-									<span class="item-news__date">31.05.2023</span>
+									<span class="item-news__date">23.10.2023</span>
 								</div>
 							</article>
-
 							<article class="news__item item-news">
 								<div class="item-news__row">
 									<div class="item-news__body">
-										<a href="#" class="item-news__title">Отмена Протокола защиты здоровья и безопасности MSC Cruises</a>
+										<a href="#" class="item-news__title">
+											<h3>Изменения в маршрутах MSC Cruises в зимнем сезоне 2023/2024</h3>
+										</a>
 										<p class="item-news__text">
-											Компания MSC Cruises отменила Протокол защиты здоровья и безопасности и все требования, указанные
-											в нем, во всех регионах плавания. Теперь можно отправляться
-											в круиз без ПЦР-тестов и ...
+											В свете текущей геополитической ситуации и для обеспечения безопасности своих пассажиров и экипажа
+											компания MSC Cruises была вынуждена отменить зимнюю программу в Красном море на лайнере MSC
+											Orchestra, которая была ...
 										</p>
 									</div>
-									<span class="item-news__date">11.05.2023</span>
+									<span class="item-news__date">23.10.2023</span>
 								</div>
 							</article>
-
 							<article class="news__item item-news">
 								<div class="item-news__row">
 									<div class="item-news__body">
-										<a href="#" class="item-news__title">Изменение оплаты сервисного сбора</a>
+										<a href="#" class="item-news__title">
+											<h3>Изменения в маршрутах MSC Cruises в зимнем сезоне 2023/2024</h3>
+										</a>
 										<p class="item-news__text">
-											С 13 июля 2023 года компания MSC Cruises вводит обязательную оплату сервисного сбора при
-											бронировании круиза. Оплата на борту теперь невозможна. Сервисный
-											сбор взимается с каждого пассажира за исключением детей в возрасте ...
+											В свете текущей геополитической ситуации и для обеспечения безопасности своих пассажиров и экипажа
+											компания MSC Cruises была вынуждена отменить зимнюю программу в Красном море на лайнере MSC
+											Orchestra, которая была ...
 										</p>
 									</div>
-									<span class="item-news__date">06.07.2023</span>
+									<span class="item-news__date">23.10.2023</span>
 								</div>
 							</article>
-
 							<article class="news__item item-news">
 								<div class="item-news__row">
 									<div class="item-news__body">
-										<a href="#" class="item-news__title">Новое: Upselling option на напитки</a>
+										<a href="#" class="item-news__title">
+											<h3>Изменения в маршрутах MSC Cruises в зимнем сезоне 2023/2024</h3>
+										</a>
 										<p class="item-news__text">
-											Начиная с летнего сезона 2023 MSC Cruises на борту лайнеров предлагают пассажирам следующую
-											Upselling option. Пассажиры, которые уже приобрели один из пакетов напитков, смогут на борту
-											лайнера применить Upselling option. Это означает, что ...
+											В свете текущей геополитической ситуации и для обеспечения безопасности своих пассажиров и экипажа
+											компания MSC Cruises была вынуждена отменить зимнюю программу в Красном море на лайнере MSC
+											Orchestra, которая была ...
 										</p>
 									</div>
-									<span class="item-news__date">31.05.2023</span>
+									<span class="item-news__date">23.10.2023</span>
 								</div>
 							</article>
-
 							<article class="news__item item-news">
 								<div class="item-news__row">
 									<div class="item-news__body">
-										<a href="#" class="item-news__title">Отмена Протокола защиты здоровья и безопасности MSC Cruises</a>
+										<a href="#" class="item-news__title">
+											<h3>Изменения в маршрутах MSC Cruises в зимнем сезоне 2023/2024</h3>
+										</a>
 										<p class="item-news__text">
-											Компания MSC Cruises отменила Протокол защиты здоровья и безопасности и все требования, указанные
-											в нем, во всех регионах плавания. Теперь можно отправляться
-											в круиз без ПЦР-тестов и ...
+											В свете текущей геополитической ситуации и для обеспечения безопасности своих пассажиров и экипажа
+											компания MSC Cruises была вынуждена отменить зимнюю программу в Красном море на лайнере MSC
+											Orchestra, которая была ...
 										</p>
 									</div>
-									<span class="item-news__date">11.05.2023</span>
+									<span class="item-news__date">23.10.2023</span>
+								</div>
+							</article>
+							<article class="news__item item-news">
+								<div class="item-news__row">
+									<div class="item-news__body">
+										<a href="#" class="item-news__title">
+											<h3>Изменения в маршрутах MSC Cruises в зимнем сезоне 2023/2024</h3>
+										</a>
+										<p class="item-news__text">
+											В свете текущей геополитической ситуации и для обеспечения безопасности своих пассажиров и экипажа
+											компания MSC Cruises была вынуждена отменить зимнюю программу в Красном море на лайнере MSC
+											Orchestra, которая была ...
+										</p>
+									</div>
+									<span class="item-news__date">23.10.2023</span>
 								</div>
 							</article>
 
 						</div>
-						<button data-show-more-btn type="button" class="news__btn-more btn-more _icon-arrow">
-							<span>Показать еще</span><span>Скрыть</span>
-						</button>
 
 					</div>
 
 				</div>
 			</section>
 
-			<div class="page__recomendation-block recomendation-block">
-				<div class="recomendation-block__container">
-					<div class="recomendation-block__title">А ТАК ЖЕ МЫ РЕКОМЕНДУЕМ </div>
-					<div class="recomendation-block__body">
-
-						<div class="recomendation">
-							<a href="#" class="recomendation__item">
-								<span class="recomendation__icon icon icon_play"></span>
-								<span class="recomendation__title">С чего начать?</span>
-							</a>
-							<a href="#" class="recomendation__item">
-								<span class="recomendation__icon icon icon_msc"></span>
-								<span class="recomendation__title">Yacht Club MSC</span>
-							</a>
+			<div class="page__telegram telegram">
+				<div class="telegram__container">
+					<div class="telegram__body">
+						<div class="telegram__img">
+							<img src="@img/1x1.png" data-src="@img/new/why-we/3.png" alt="">
 						</div>
-
-
-						<div class="recomendation">
-							<a href="#" class="recomendation__item">
-								<span class="recomendation__icon icon icon_fly"></span>
-								<span class="recomendation__title">Кругосветное путешествие</span>
-							</a>
-							<a href="#" class="recomendation__item">
-								<span class="recomendation__icon icon icon_ok"></span>
-								<span class="recomendation__title">Как выбрать круиз?</span>
-							</a>
-						</div>
-
+						<p class="telegram__text">
+							В телеграмме каждую неделю мы размещаем лучшие предложения
+						</p>
+						<a href="#" class="telegram__btn btn _icon-telegram">Телеграмм</a>
 					</div>
 				</div>
 			</div>
+
 		</main>
 		@@include('html/_footer.htm',{})
 	</div>

@@ -56,11 +56,11 @@ const resizableSwiper = (breakpoint, swiperClass, swiperSettings, callback) => {
 	const checker = function() {
 		// console.log('CHANGE');
 		if (breakpoint.matches) {
-			// console.log('da');
+			console.log('da');
 			return enableSwiper(swiperClass, swiperSettings);
 		} else {
 			if (swiper !== undefined) {
-				// console.log('net');
+				console.log('net');
 				swiper.destroy(true, true);
 				return;
 			}
@@ -90,10 +90,111 @@ function initSliders() {
 
 	// Перечень слайдеров
 
-	if (document.querySelector('.promotion__slider')) {
+	if (document.querySelector('.promo__slider')) {
+
+		new Swiper('.promo__slider', {
+				// Подключаем модули слайдера
+				// для конкретного случая
+				//modules: [Navigation, Pagination],
+				modules: [Navigation],
+		
+				// effect: 'fade',
+				// autoplay: {
+				//   delay: 2500,
+				//   disableOnInteraction: false,
+				// },
+		
+				// observer: true,
+				// observeParents: true,
+				slidesPerView: 1,
+				spaceBetween: 0,
+				// autoHeight: true,
+				speed: 800,
+				// touchRatio: 0,
+				//simulateTouch: false,
+				loop: true,
+				//preloadImages: false,
+				//lazy: true,
+				// Dotts
+				// pagination: {
+				// 	el: '.service__pagination',
+				// 	clickable: true,
+				// },
+				// Arrows
+				navigation: {
+					prevEl: '.promo__slider-nav .slider-nav-n__btn_prev',
+					nextEl: '.promo__slider-nav .slider-nav-n__btn_next',
+				},
+				// breakpoints: {
+				// 	0: {
+				// 		slidesPerView: 1,
+				// 		spaceBetween: 30,
+				// 	},
+				// 	// 320: {
+				// 	// 	slidesPerView: "auto",
+				// 	// 	spaceBetween: 28,
+				// 	// },
+				// 	// 768: {
+				// 	// 	slidesPerView: 2,
+				// 	// 	spaceBetween: 30,
+				// 	// },
+				// 	// 992: {
+				// 	// },
+				// 	// 1268: {
+				// 	// 	slidesPerView: 1,
+				// 	// 	spaceBetween: 44,
+				// 	// },
+				// },
+
+				on: {
+
+				}
+			}
+		)
+	}
+
+	if (document.querySelector('.water-areas__sliders')) {
+		const sliders = document.querySelectorAll('.water-areas__slider');
+		// console.log(sliders);
+		for (let i = 0; i < sliders.length; i++) {
+			const slider =  sliders[i];
+			let classSlider = `water-areas__slider_${i}`;
+			slider.classList.add(classSlider);
+
+			resizableSwiper (
+				'(max-width: 992px)',
+				`.${classSlider}`, {
+					// Подключаем модули слайдера
+					// для конкретного случая
+					//modules: [Navigation, Pagination],
+					modules: [Navigation],
+			
+					// effect: 'fade',
+					// autoplay: {
+					//   delay: 2500,
+					//   disableOnInteraction: false,
+					// },
+					navigation: {
+						nextEl: `.${classSlider} .slider-nav-n .slider-nav-n__btn_next`,
+						prevEl: `.${classSlider} .slider-nav-n .slider-nav-n__btn_prev`,
+					},
+			
+					slidesPerView: 2,
+					spaceBetween: 20,
+					speed: 800,
+
+				}
+			)
+			
+		}
+
+
+	}
+
+	if (document.querySelector('.leisure__slider')) {
 		resizableSwiper (
 			'(max-width: 992px)',
-			'.promotion__slider', {
+			'.leisure__slider', {
 				// Подключаем модули слайдера
 				// для конкретного случая
 				//modules: [Navigation, Pagination],
@@ -108,7 +209,7 @@ function initSliders() {
 				// observer: true,
 				// observeParents: true,
 				slidesPerView: 1,
-				spaceBetween: 0,
+				spaceBetween: 20,
 				// autoHeight: true,
 				speed: 800,
 				// touchRatio: 0,
@@ -153,6 +254,206 @@ function initSliders() {
 			}
 		)
 	}
+
+	if (document.querySelector('.promotion__slider')) {
+		resizableSwiper (
+			'(max-width: 992px)',
+			'.promotion__slider', {
+				// Подключаем модули слайдера
+				// для конкретного случая
+				//modules: [Navigation, Pagination],
+				modules: [Navigation],
+		
+				// effect: 'fade',
+				// autoplay: {
+				//   delay: 2500,
+				//   disableOnInteraction: false,
+				// },
+		
+				// observer: true,
+				// observeParents: true,
+				slidesPerView: 1,
+				spaceBetween: 0,
+				// autoHeight: true,
+				speed: 800,
+				// touchRatio: 0,
+				//simulateTouch: false,
+				//loop: true,
+				//preloadImages: false,
+				//lazy: true,
+				// Dotts
+				// pagination: {
+				// 	el: '.service__pagination',
+				// 	clickable: true,
+				// },
+				// Arrows
+				navigation: {
+					nextEl: `.promotion__slider .slider-nav-n .slider-nav-n__btn_next`,
+					prevEl: `.promotion__slider .slider-nav-n .slider-nav-n__btn_prev`,
+				},
+				// breakpoints: {
+				// 	0: {
+				// 		slidesPerView: 1,
+				// 		spaceBetween: 30,
+				// 	},
+				// 	// 320: {
+				// 	// 	slidesPerView: "auto",
+				// 	// 	spaceBetween: 28,
+				// 	// },
+				// 	// 768: {
+				// 	// 	slidesPerView: 2,
+				// 	// 	spaceBetween: 30,
+				// 	// },
+				// 	// 992: {
+				// 	// },
+				// 	// 1268: {
+				// 	// 	slidesPerView: 1,
+				// 	// 	spaceBetween: 44,
+				// 	// },
+				// },
+
+				on: {
+
+				}
+			}
+		)
+	}
+	
+
+	
+	// =====
+
+	if (document.querySelector('.slider-ps_1 .slider-ps__slider')) {
+		new Swiper('.slider-ps_1  .slider-ps__slider', {
+			// Подключаем модули слайдера
+			// для конкретного случая
+			//modules: [Navigation, Pagination],
+			modules: [Navigation, Autoplay],
+	
+			// effect: 'fade',
+			autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+	
+			// observer: true,
+			// observeParents: true,
+			slidesPerView: 1,
+			spaceBetween: 0,
+			// autoHeight: true,
+			speed: 800,
+			// touchRatio: 0,
+			//simulateTouch: false,
+			loop: true,
+			//preloadImages: false,
+			//lazy: true,
+			// Dotts
+			// pagination: {
+			// 	el: '.desc__slider-pagination',
+			// 	clickable: true,
+			// },
+			// Arrows
+			navigation: {
+				nextEl: '.slider-ps_1 .slider-nav-n .slider-nav-n__btn_next',
+				prevEl: '.slider-ps_1  .slider-nav-n .slider-nav-n__btn_prev',
+			},
+
+			on: {
+
+			}
+		});
+	}
+
+	if (document.querySelector('.slider-ps_2 .slider-ps__slider')) {
+		new Swiper('.slider-ps_2 .slider-ps__slider', {
+			// Подключаем модули слайдера
+			// для конкретного случая
+			//modules: [Navigation, Pagination],
+			modules: [Navigation, Autoplay],
+	
+			// effect: 'fade',
+			autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+	
+			// observer: true,
+			// observeParents: true,
+			slidesPerView: 1,
+			spaceBetween: 0,
+			// autoHeight: true,
+			speed: 800,
+			// touchRatio: 0,
+			//simulateTouch: false,
+			loop: true,
+			//preloadImages: false,
+			//lazy: true,
+			// Dotts
+			// pagination: {
+			// 	el: '.desc__slider-pagination',
+			// 	clickable: true,
+			// },
+			// Arrows
+			navigation: {
+				nextEl: '.slider-ps_2 .slider-nav-n .slider-nav-n__btn_next',
+				prevEl: '.slider-ps_2  .slider-nav-n .slider-nav-n__btn_prev',
+			},
+
+			on: {
+
+			}
+		});
+
+
+	}
+
+	if (document.querySelector('.premium-company__slider')) {
+		new Swiper('.premium-company__slider', {
+			// Подключаем модули слайдера
+			// для конкретного случая
+			//modules: [Navigation, Pagination],
+			modules: [Navigation, Autoplay],
+	
+			// effect: 'fade',
+			autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+	
+			// observer: true,
+			// observeParents: true,
+			slidesPerView: 1,
+			spaceBetween: 0,
+			// autoHeight: true,
+			speed: 800,
+			// touchRatio: 0,
+			//simulateTouch: false,
+			loop: true,
+			//preloadImages: false,
+			//lazy: true,
+			// Dotts
+			// pagination: {
+			// 	el: '.desc__slider-pagination',
+			// 	clickable: true,
+			// },
+			// Arrows
+			navigation: {
+				nextEl: '.premium-company__slider .slider-nav-n .slider-nav-n__btn_next',
+				prevEl: '.premium-company__slider  .slider-nav-n .slider-nav-n__btn_prev',
+			},
+
+			on: {
+
+			}
+		});
+
+
+	}
+
+
+
+	// =====
+
 	
 	if (document.querySelector('.liner__swiper')) {
 		new Swiper('.liner__slider', {
@@ -416,7 +717,7 @@ function initSliders() {
 
 	if (document.querySelector('.suite')) {
 		const sliders = document.querySelectorAll('.item-suite__slider');
-		console.log(sliders);
+		// console.log(sliders);
 		for (let i = 0; i < sliders.length; i++) {
 			const slider =  sliders[i];
 			let classSlider = `item-suite__slider_${i}`;
